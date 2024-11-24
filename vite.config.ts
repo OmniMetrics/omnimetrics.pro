@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/omnimetrics.pro/', // Replace <REPO-NAME> with your GitHub repository name
+  base: '/', // Replace <REPO-NAME> with your GitHub repository name
   plugins: [
     vue(),
   ],
