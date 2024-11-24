@@ -83,7 +83,7 @@ import Logo from '@/components/Logo.vue'
     <div
       class="bg-cover bg-center bg-no-repeat w-full h-full"
       style="
-        background-image: url('/home-section-bg.png');
+        background-image: url('home-section-bg.png');
         background-blend-mode: saturation;
       "
     >
@@ -194,7 +194,7 @@ import Logo from '@/components/Logo.vue'
       <section
         class="flex flex-col items-center justify-between mt-20 space-y-8 bg-contain bg-center bg-no-repeat bg-primary bg-opacity-20 w-full h-full"
         style="
-          background-image: url('/home-ai.png');
+          background-image: url('home-ai.png');
           background-blend-mode: darken;
         "
       >
