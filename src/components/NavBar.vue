@@ -41,12 +41,12 @@
           :class="{ 'active-link': isActive('/features') }"
           >Features</router-link
         >
-        <router-link
+        <!-- <router-link
           to="/"
           class="hover:text-gray-300 uppercase"
           :class="{ 'active-link': isActive('/universe') }"
           >Om Universe</router-link
-        >
+        > -->
         <router-link
           to="/"
           class="hover:text-gray-300 uppercase"
@@ -55,6 +55,7 @@
         >
         <button
           class="bg-gradient-to-r from-gray-900 to-[#2a28a3] text-white px-4 py-2 rounded-full hover:bg-indigo-700 uppercase font-bold border border-white"
+          @click="$emit('open-modal')"
         >
           Join Om
         </button>

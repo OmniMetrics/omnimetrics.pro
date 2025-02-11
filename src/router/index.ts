@@ -22,11 +22,11 @@ const router = createRouter({
       name: 'features',
       component: FeaturesView,
     },
-    {
-      path: '/universe',
-      name: 'universe',
-      component: UniverseView,
-    },
+    // {
+    //   path: '/universe',
+    //   name: 'universe',
+    //   component: UniverseView,
+    // },
   ],
 })
 
