@@ -18,6 +18,7 @@ import Logo from '@/components/Logo.vue'
         </p>
         <button
           class="bg-gradient-to-r from-gray-900 to-[#2a28a3] text-white px-20 py-4 rounded-full hover:bg-indigo-700 uppercase font-bold border border-white"
+          @click="$emit('open-modal')"
         >
           Subscribe to The platform
         </button>
@@ -229,13 +230,13 @@ import Logo from '@/components/Logo.vue'
         </div>
       </section>
     </div>
-    <div class="text-left w-full">
+    <!-- <div class="text-left w-full">
       <button
         class="mt-4 bg-gradient-to-r from-[#3533cd] to-[#ff4646] text-white px-20 py-4 rounded-full border border-white hover:bg-gradient-to-r hover:from-[#2a28a3] hover:to-[#ff4646] uppercase font-bold"
       >
         JOIN THE OM PLATFORM NOW!
       </button>
-    </div>
+    </div> -->
     <section class="relative flex items-center justify-center mt-20">
       <div class="absolute w-full h-0.5 bg-white"></div>
       <div
@@ -251,6 +252,7 @@ import Logo from '@/components/Logo.vue'
       >
         <span
           class="flex py-4 px-24 w-full text-sm text-black bg-white rounded-full p-2"
+          @click="$emit('open-modal')"
         >
           DROP US A MESSAGE
         </span>
