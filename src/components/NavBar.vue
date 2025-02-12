@@ -48,7 +48,7 @@
           >Om Universe</router-link
         > -->
         <router-link
-          to="/"
+          to="/about"
           class="hover:text-gray-300 uppercase"
           :class="{ 'active-link': isActive('/about') }"
           >About Us</router-link

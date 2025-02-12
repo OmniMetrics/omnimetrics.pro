@@ -14,8 +14,8 @@ const handleOpenModal = () => {
 </script>
 
 <template class="bg-primary">
-  <NavBar @open-modal="handleOpenModal" />
+  <NavBar @open-modal="handleOpenModal" class="z-50 relative"/>
   <div class="xl:px-20"><RouterView @open-modal="handleOpenModal" /></div>
-  <Footer class="mt-12"/>
+  <Footer class="mt-12 relative"/>
   <Message :visible="isModalVisible" @close="isModalVisible = false" />
 </template>
