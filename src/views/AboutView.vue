@@ -182,7 +182,7 @@ import Logo from '@/components/Logo.vue'
             <p>
               Samuel combines years of experience in building large-scale distributed systems, AI, 
               and computer vision algorithms with a passion for football and real-time data insights. 
-              He is committed to leveraging advanced technologies to optimize performance and gain a competitive edge.
+              He is committed to leveraging advanced technologies to optimize performance and secure a strategic advantage in the market.
             </p>
 
             <!-- Partial top border: left half only, fading to transparent -->
