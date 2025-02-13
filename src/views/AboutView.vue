@@ -51,8 +51,10 @@ import Logo from '@/components/Logo.vue'
           complementary expertise drives the company's vision and operations.
         </p>
       </section>
+
+
       <section
-        class="flex flex-col md:flex-row items-start w-full max-w-5xl py-8 text-gray-100"
+        class="flex flex-col md:flex-row mx-auto items-center w-full max-w-5xl py-8 text-gray-100"
       >
         <!-- LEFT SIDE (Text) -->
         <div class="w-full md:w-2/3 md:pr-8">
@@ -68,12 +70,9 @@ import Logo from '@/components/Logo.vue'
             class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl"
           >
             <p>
-              With years of experience playing federated football in both the UK
-              and Portugal, Pedro brings a deep understanding of the tactical
-              and strategic aspects of the game. Holding a BSc in Football
-              Studies, he is committed to ensuring that clubs at every level
-              have the insights they need to optimize performance and gain a
-              competitive edge.
+              Pedro has years of federated football experience in the UK and Portugal, 
+              bringing deep tactical and strategic expertise. With a BSc in Football Studies, 
+              he equips clubs at all levels with insights to optimize performance and gain a competitive edge.
             </p>
 
             <!-- Partial top border: left half only, fading to transparent -->
@@ -108,8 +107,9 @@ import Logo from '@/components/Logo.vue'
           />
         </div>
       </section>
+
       <section
-        class="flex flex-col md:flex-row items-start w-full max-w-5xl py-8 text-gray-100"
+        class="flex flex-col md:flex-row mx-auto items-start w-full max-w-5xl py-8 text-gray-100"
       >
         <!-- LEFT SIDE (Image) -->
         <div
@@ -138,12 +138,9 @@ import Logo from '@/components/Logo.vue'
             class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl"
           >
             <p>
-              Leading the development of the platform, Eduardo focuses on
-              creating a robust and user-friendly interface that transforms data
-              into actionable insights. With expertise in AI and software
-              engineering, he is dedicated to building a solution that empowers
-              teams to enhance their performance through continuous
-              technological innovation.
+              Eduardo leads platform development, to transform football data into actionable insights. 
+              With AI and software engineering expertise, he is committed to empower teams 
+              to enhance performance through continuous technological innovation.
             </p>
 
             <!-- Partial top border: right half only, fading to transparent -->
@@ -165,6 +162,62 @@ import Logo from '@/components/Logo.vue'
           </div>
         </div>
       </section>
+
+      <section
+        class="flex flex-col md:flex-row mx-auto items-center w-full max-w-5xl py-8 text-gray-100"
+      >
+        <!-- LEFT SIDE (Text) -->
+        <div class="w-full md:w-2/3 md:pr-4">
+          <!-- Name label -->
+          <div
+            class="text-lg font-bold uppercase text-secondary tracking-wider mb-2"
+          >
+            SAMUEL FERNANDES
+          </div>
+
+          <!-- Bordered box for main paragraph -->
+          <div
+            class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl"
+          >
+            <p>
+              Samuel combines years of experience in building large-scale distributed systems, AI, 
+              and computer vision algorithms with a passion for football and real-time data insights. 
+              He is committed to leveraging advanced technologies to optimize performance and gain a competitive edge.
+            </p>
+
+            <!-- Partial top border: left half only, fading to transparent -->
+            <span
+              class="pointer-events-none absolute top-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Partial bottom border: left half only, fading to transparent -->
+            <span
+              class="pointer-events-none absolute bottom-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent"
+              aria-hidden="true"
+            ></span>
+
+            <!-- Bottom small label -->
+            <div class="mt-4 text-md text-gray-400">
+              MSc in Computer Science
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE (Image) -->
+        <div
+          class="w-full md:w-1/3 mt-6 md:mt-0 flex justify-center"
+        >
+          <!-- Example image; replace with your own. 
+           Use object-cover or object-contain as desired. -->
+          <img
+            src="/src/assets/img/about-samu.png"
+            alt="Person's Profile"
+            class="rounded-lg shadow-lg max-w-xs max-h-96"
+          />
+        </div>
+      </section>
+
       <section class="w-full text-gray-100 space-y-8">
         <!-- TOP BLOCK (MISSION) -->
         <div class="relative border-l-4 border-gray-600 p-8">

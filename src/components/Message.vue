@@ -70,7 +70,7 @@ export default {
             const domain = 'omnimetrics.pro';
             const subject = `Message from ${this.name}`;
             const body = this.message;
-            const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const mailtoLink = `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.location.href = mailtoLink;
         },
         closeModal() {
