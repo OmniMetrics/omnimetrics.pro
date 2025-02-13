@@ -36,7 +36,7 @@
           >Home</router-link
         >
         <router-link
-          to="/"
+          to="/features"
           class="hover:text-gray-300 uppercase"
           :class="{ 'active-link': isActive('/features') }"
           >Features</router-link
