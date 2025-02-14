@@ -1,66 +1,59 @@
 <template>
-  <nav class="bg-gray-900 text-white">
-    <div class="mx-auto flex flex-col md:flex-row justify-between items-center">
-      <div
-        class="md:hidden flex justify-between items-center w-full md:w-auto mb-4"
-      >
-        <div class="flex-shrink-0">
-          <img src="/src/assets/logo.svg" alt="Logo" class="h-8 w-auto" />
-        </div>
-        <button class="md:hidden text-white" @click="toggleMenu">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
-        </button>
+  <nav class="bg-primary text-white shadow-xl backdrop-blur-md bg-opacity-90">
+    <div class="mx-auto flex flex-col md:flex-row justify-between items-center p-4 max-w-7xl">
+      <!-- Logo on the Left -->
+      <div class="flex-shrink-0">
+        <img src="/src/assets/logo.svg" alt="Logo" class="h-10 w-auto hover:scale-110 transition-transform duration-300" />
       </div>
-      <div class="hidden md:flex flex-1 border-t border-white mr-10"></div>
+
+      <!-- Content on the Right -->
       <div
         :class="{ hidden: !menuOpen, flex: menuOpen }"
-        class="flex-col md:flex md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 text-xs md:text-base"
+        class="flex-col md:flex md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-8 text-sm md:text-base"
       >
         <router-link
           to="/"
-          class="hover:text-gray-300 uppercase"
+          class="nav-link uppercase transition-colors duration-300"
           :class="{ 'active-link': isActive('/') }"
           >Home</router-link
         >
         <router-link
           to="/features"
-          class="hover:text-gray-300 uppercase"
+          class="nav-link uppercase transition-colors duration-300"
           :class="{ 'active-link': isActive('/features') }"
           >Features</router-link
         >
-        <!-- <router-link
-          to="/"
-          class="hover:text-gray-300 uppercase"
-          :class="{ 'active-link': isActive('/universe') }"
-          >Om Universe</router-link
-        > -->
         <router-link
           to="/about"
-          class="hover:text-gray-300 uppercase"
+          class="nav-link uppercase transition-colors duration-300"
           :class="{ 'active-link': isActive('/about') }"
           >About Us</router-link
         >
         <button
-          class="bg-gradient-to-r from-gray-900 to-[#2a28a3] text-white px-4 py-2 rounded-full hover:bg-indigo-700 uppercase font-bold border border-white"
+          class="bg-gradient-to-r from-secondary to-accent text-white px-6 py-2 rounded-full hover:bg-accent uppercase font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-accent/50"
           @click="$emit('open-modal')"
         >
           Join Om
         </button>
       </div>
-      <div class="hidden md:flex flex-1 border-t border-white ml-10"></div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white hover:text-gray-300 transition-colors" @click="toggleMenu">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
     </div>
   </nav>
 </template>
@@ -89,7 +82,56 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, theme('colors.secondary'), theme('colors.accent'));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link:hover {
+  background-color: rgba(118, 205, 242, 0.1); /* Secondary color with transparency */
+  border-radius: 4px;
+}
+
 .active-link {
-  color: #76cdf2;
+  color: theme('colors.secondary');
+  font-weight: bold;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, theme('colors.secondary'), theme('colors.accent'));
+  animation: underline 0.3s ease-in-out;
+}
+
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 </style>
