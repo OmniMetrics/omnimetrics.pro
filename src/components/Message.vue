@@ -21,7 +21,7 @@
       <!-- Modal Header -->
       <div class="mb-6">
         <h2 class="text-2xl font-bold text-white mb-4">
-          Interested in Joining or Learning More?
+          Interested in OmniMetrics?
         </h2>
         <p class="text-sm text-gray-300">
           If you're curious about joining our platform or want to know more

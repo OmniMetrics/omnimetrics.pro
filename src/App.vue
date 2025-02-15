@@ -13,8 +13,17 @@ const handleOpenModal = () => {
 </script>
 
 <template>
+  <!-- Navbar-->
   <NavBar @open-modal="handleOpenModal" class="z-50 relative" />
-  <div class="xl:px-20"><RouterView @open-modal="handleOpenModal"  /></div>
-  <Footer class="mt-12 relative"/>
+
+  <!-- Body -->
+  <div class="xl:px-20 max-w-screen-xl mx-auto">
+    <RouterView @open-modal="handleOpenModal" />
+  </div>
+
+  <!-- Footer -->
+  <Footer @open-modal="handleOpenModal" class="mt-12 relative"/>
+
+  <!-- Modal -->
   <Message :visible="isModalVisible" @close="isModalVisible = false" />
 </template>
