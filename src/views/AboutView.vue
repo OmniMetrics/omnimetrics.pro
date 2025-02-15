@@ -10,7 +10,7 @@
         <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-down">
           The OmniMetrics Team
         </h1>
-        <p class="max-w-3xl mx-auto text-center text-sm md:text-base text-gray-300 leading-relaxed animate-fade-in-up">
+        <p class="max-w-3xl mx-auto text-center text-lg md:text-xl text-gray-300 leading-relaxed animate-fade-in-up">
           OmniMetrics is founded on the synergy of multiple professionals whose
           complementary expertise drives the company's vision and operations.
         </p>
