@@ -38,7 +38,7 @@ onUnmounted(() => {
   <div class="bg-gray-900 text-white">
     <!-- Hero Section -->
     <section class="w-full text-gray-100 py-20 px-4 bg-gray-900">
-      <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-gradient bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-6 animate-fade-in-down">
+      <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-down">
         Unlock Your Team's Full Potential
       </h1>
       <p class="max-w-3xl mx-auto text-center text-lg md:text-xl text-gray-300 leading-relaxed animate-fade-in-up">
@@ -50,11 +50,11 @@ onUnmounted(() => {
     <!-- Real-time Metrics Section -->
     <section class="py-16 bg-gray-900">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-8 text-center animate-fade-in-down">
-          Real-time Game Metrics
+        <h2 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-down text-blue-400">
+          Game Metrics
         </h2>
         <p class="max-w-2xl mx-auto text-center text-lg text-gray-300 mb-12 animate-fade-in-up">
-          Capture and analyze crucial data as the game unfolds, providing instant insights to inform strategic decisions.
+          Capture and analyze crucial data from the game, providing insights to inform strategic decisions.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- In-Possession Metrics -->
@@ -139,7 +139,7 @@ onUnmounted(() => {
     <section id="game-analysis-section" class="py-16 md:py-24 bg-gray-900 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isSecondSectionVisible, 'opacity-100 translate-y-0': isSecondSectionVisible }">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 md:mb-16 animate-fade-in-down">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-4 leading-tight">
+          <h2 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-down text-blue-400">
             Advanced Game Analysis
           </h2>
           <p class="max-w-2xl mx-auto text-gray-300 text-lg">
