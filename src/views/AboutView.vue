@@ -64,7 +64,7 @@
               <p>
                 Pedro brings years of federated football experience from the UK and Portugal, 
                 offering deep tactical and strategic expertise. With a BSc in Football Studies, 
-                he equips clubs at all levels with insights to optimize performance and gain a competitive edge.
+                he empowers clubs at all levels with insights to optimize performance and gain a competitive edge.
               </p>
               <span class="pointer-events-none absolute top-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
               <span class="pointer-events-none absolute bottom-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>

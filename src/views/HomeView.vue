@@ -110,11 +110,11 @@ onUnmounted(() => {
 
     <!-- Platform Overview Section -->
     <section id="platform-section" class="py-8 md:py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isPlatformVisible, 'opacity-100 translate-y-0': isPlatformVisible }">
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between md:gap-8">
         <!-- Left Column: Platform Demo Image -->
-        <div class="hidden md:flex md:w-1/3 mt-8 md:mt-0 justify-center items-center animate-fade-in-left">
+        <div class="md:flex md:w-1/3 md:mt-0 justify-center items-center animate-fade-in-left">
           <img
-            src="/src/assets/img/home-gif.png"
+            src="/src/assets/img/player-track.png"
             alt="Platform Demo"
             class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
           />
@@ -122,26 +122,24 @@ onUnmounted(() => {
 
         <!-- Right Column: Text Content -->
         <div class="md:w-2/3 text-center md:text-left">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-down text-blue-400">
+          <h2 class="uppercase text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-down text-blue-400">
             AI-Driven Platform
           </h2>
           <h3 class="text-xl md:text-2xl font-extrabold mb-4 md:mb-6 animate-fade-in-down">
             Unlock the power of data-driven football analysis
           </h3>
           <p class="mb-4 text-base md:text-lg text-gray-300 animate-fade-in-up">
-            OmniMetrics leverages cutting-edge AI to transform raw football footage into actionable insights. Whether you're analyzing match performance or refining training sessions, our platform delivers precise metrics tailored to your team's needs.
-          </p>
+            OmniMetrics uses cutting-edge AI to turn raw football footage into actionable insights. Whether analyzing matches or refining training, our platform delivers precise, team-specific metrics.</p>
           <p class="mb-4 text-base md:text-lg text-gray-300 animate-fade-in-up">
-            Simply upload your videos, and our AI will process them to provide detailed reports on player performance, tactical patterns, and key events — all without manual input.
-          </p>
-          <p class="mb-8 md:mb-16 text-base md:text-lg text-gray-300 animate-fade-in-up">
+            Upload your videos, and our AI generates detailed reports on player performance, tactical patterns, and key events — no manual input needed.</p>
+          <p class="mb-8 md:mb-16 text-xl font-extrabold text-gray-300 animate-fade-in-up">
             With OmniMetrics, you'll have the tools to make smarter decisions, optimize strategies, and elevate your team's performance to the next level.
           </p>
         </div>
       </div>
 
       <!-- Feature Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
         <!-- Card 1: Tailored Insights -->
         <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 animate-fade-in-left">
           <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full">
@@ -179,6 +177,13 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
+
+      <!-- 3d Picture -->
+
+    <div>
+      <img src="/src/assets/img/3d-match.png" alt="3d" 
+      class="w-4/5 mx-auto p-1 mt-12 transform hover:scale-105 transition-transform duration-300" />
+    </div>
 
     <!-- AI Workflow Section -->
     <section id="workflow-section" class="py-8 md:py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isWorkflowVisible, 'opacity-100 translate-y-0': isWorkflowVisible }">
