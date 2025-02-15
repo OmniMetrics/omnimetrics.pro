@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const actionPoints = ref([
+const actionPointsField = ref([
   { number: '01', text: 'Automated Highlight Generation' },
   { number: '02', text: 'Tactical Pattern Recognition' },
   { number: '03', text: 'Performance Insights' },
 ])
+
+const actionPointsLockerRoom = ref([
+  { number: '04', text: 'Team Strategy Breakdown' },
+  { number: '05', text: 'Detailed Metrics Extraction' },
+  { number: '06', text: 'Game Model Analysis' },
+])
+
 
 const imageSrc = ref('/src/assets/img/football-trainer-platform.jpg')
 const isSecondSectionVisible = ref(false)
@@ -162,13 +169,39 @@ onUnmounted(() => {
           </div>
           <div class="w-full lg:w-1/2 animate-fade-in-right">
             <div class="grid grid-cols-1 gap-8">
-              <div v-for="(point, index) in actionPoints" :key="index" class="flex items-center space-x-4 group">
+              <div v-for="(point, index) in actionPointsField" :key="index" class="flex items-center space-x-4 group">
                 <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <span class="text-xl font-bold text-white">{{ point.number }}</span>
                 </div>
                 <p class="text-xl md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
                   {{ point.text }}
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 flex flex-col-reverse lg:flex-row items-center justify-center gap-12 lg:gap-16">
+          <div class="w-full lg:w-1/2 animate-fade-in-right">
+            <div class="grid grid-cols-1 gap-8">
+              <div v-for="(point, index) in actionPointsLockerRoom" :key="index" class="flex space-x-4 group">
+                <p class="text-xl text-right ml-auto md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                  {{ point.text }}
+                </p>
+                <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-xl font-bold text-white">{{ point.number }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 animate-fade-in-left">
+            <div class="relative group">
+              <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
+              <div class="relative">
+                <img
+                  src="/src/assets/img/football-trainer-locker-room.jpg"
+                  alt="Game Analysis Visualization"
+                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                />
               </div>
             </div>
           </div>
