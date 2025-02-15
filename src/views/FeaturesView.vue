@@ -153,7 +153,7 @@ onUnmounted(() => {
               <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
               <div class="relative">
                 <img
-                  :src="imageSrc"
+                  src="/src/assets/img/football-trainer-platform.jpg"
                   alt="Game Analysis Visualization"
                   class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
                 />
