@@ -75,20 +75,20 @@ onUnmounted(() => {
 <template>
   <main class="bg-gray-900 text-white">
     <!-- Hero Section -->
-    <section id="hero-section" class="flex flex-col md:flex-row items-center justify-between py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isHeroVisible, 'opacity-100 translate-y-0': isHeroVisible }">
+    <section id="hero-section" class="flex flex-col md:flex-row items-center justify-between py-8 md:py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isHeroVisible, 'opacity-100 translate-y-0': isHeroVisible }">
       <div class="md:w-3/5 text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-down">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-in-down">
           OmniMetrics
         </h1>
-        <h2 class="text-1xl md:text-2xl font-extrabold mb-6 animate-fade-in-down">
+        <h2 class="text-xl md:text-2xl font-extrabold mb-4 md:mb-6 animate-fade-in-down">
           #PlatformYourGame
         </h2>
-        <p class="mb-8 text-xl md:text-2xl text-gray-300 animate-fade-in-up">
+        <p class="mb-6 md:mb-8 text-lg md:text-xl text-gray-300 animate-fade-in-up">
           OmniMetrics is the ultimate AI-powered platform designed to transform
           your football footage into actionable insights.
         </p>
         <button
-          class="bg-gradient-to-r from-secondary to-accent text-white px-12 py-4 rounded-full hover:scale-105 transition-transform duration-300 uppercase font-bold animate-fade-in-up"
+          class="bg-gradient-to-r from-secondary to-accent text-white px-8 md:px-12 py-3 md:py-4 rounded-full hover:scale-105 transition-transform duration-300 uppercase font-bold animate-fade-in-up"
           @click="$emit('open-modal')"
         >
           Subscribe to the Platform
@@ -109,10 +109,10 @@ onUnmounted(() => {
     </section>
 
     <!-- Platform Overview Section -->
-    <section id="platform-section" class="py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isPlatformVisible, 'opacity-100 translate-y-0': isPlatformVisible }">
+    <section id="platform-section" class="py-8 md:py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isPlatformVisible, 'opacity-100 translate-y-0': isPlatformVisible }">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
         <!-- Left Column: Platform Demo Image -->
-        <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center items-center animate-fade-in-left">
+        <div class="hidden md:flex md:w-1/3 mt-8 md:mt-0 justify-center items-center animate-fade-in-left">
           <img
             src="/src/assets/img/home-gif.png"
             alt="Platform Demo"
@@ -122,33 +122,33 @@ onUnmounted(() => {
 
         <!-- Right Column: Text Content -->
         <div class="md:w-2/3 text-center md:text-left">
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-down text-blue-400">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-down text-blue-400">
             AI-Driven Platform
           </h2>
-          <h3 class="text-1xl md:text-2xl font-extrabold mb-6 animate-fade-in-down">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-4 md:mb-6 animate-fade-in-down">
             Unlock the power of data-driven football analysis
           </h3>
-          <p class="mb-4 text-lg text-gray-300 animate-fade-in-up">
+          <p class="mb-4 text-base md:text-lg text-gray-300 animate-fade-in-up">
             OmniMetrics leverages cutting-edge AI to transform raw football footage into actionable insights. Whether you're analyzing match performance or refining training sessions, our platform delivers precise metrics tailored to your team's needs.
           </p>
-          <p class="mb-4 text-lg text-gray-300 animate-fade-in-up">
+          <p class="mb-4 text-base md:text-lg text-gray-300 animate-fade-in-up">
             Simply upload your videos, and our AI will process them to provide detailed reports on player performance, tactical patterns, and key events — all without manual input.
           </p>
-          <p class="mb-16 text-lg text-gray-300 animate-fade-in-up">
+          <p class="mb-8 md:mb-16 text-base md:text-lg text-gray-300 animate-fade-in-up">
             With OmniMetrics, you'll have the tools to make smarter decisions, optimize strategies, and elevate your team's performance to the next level.
           </p>
         </div>
       </div>
 
       <!-- Feature Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-16">
         <!-- Card 1: Tailored Insights -->
         <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 animate-fade-in-left">
-          <div class="bg-gray-900 p-8 rounded-3xl h-full">
-            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-2xl font-bold mb-4">
+          <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full">
+            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-xl md:text-2xl font-bold mb-4">
               Tailored Insights
             </h3>
-            <p class="text-gray-300">
+            <p class="text-gray-300 text-sm md:text-base">
               Customize your analytics to focus on the metrics that matter most. From player performance to tactical trends, OmniMetrics delivers insights tailored to your team's goals.
             </p>
           </div>
@@ -156,11 +156,11 @@ onUnmounted(() => {
 
         <!-- Card 2: Cost-Effective Solutions -->
         <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 animate-fade-in-up">
-          <div class="bg-gray-900 p-8 rounded-3xl h-full">
-            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 text-2xl font-bold mb-4">
+          <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full">
+            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 text-xl md:text-2xl font-bold mb-4">
               Cost-Effective Solutions
             </h3>
-            <p class="text-gray-300">
+            <p class="text-gray-300 text-sm md:text-base">
               Designed for clubs of all sizes, OmniMetrics offers flexible pricing plans to fit your budget. Get professional-grade analytics without breaking the bank.
             </p>
           </div>
@@ -168,11 +168,11 @@ onUnmounted(() => {
 
         <!-- Card 3: User-Friendly Interface -->
         <div class="bg-gradient-to-r from-green-600 to-teal-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 animate-fade-in-right">
-          <div class="bg-gray-900 p-8 rounded-3xl h-full">
-            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 text-2xl font-bold mb-4">
+          <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full">
+            <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 text-xl md:text-2xl font-bold mb-4">
               User-Friendly Interface
             </h3>
-            <p class="text-gray-300">
+            <p class="text-gray-300 text-sm md:text-base">
               No technical expertise required. OmniMetrics is built for coaches and analysts of all skill levels, ensuring seamless integration into your workflow.
             </p>
           </div>
@@ -181,13 +181,13 @@ onUnmounted(() => {
     </section>
 
     <!-- AI Workflow Section -->
-    <section id="workflow-section" class="py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isWorkflowVisible, 'opacity-100 translate-y-0': isWorkflowVisible }">
+    <section id="workflow-section" class="py-8 md:py-16 px-4 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isWorkflowVisible, 'opacity-100 translate-y-0': isWorkflowVisible }">
       <div class="container mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-down text-blue-400">
+        <div class="text-center mb-8 md:mb-12">
+          <h2 class="text-center text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 animate-fade-in-down text-blue-400">
             How The Platform Works
           </h2>
-          <h3 class="text-1xl md:text-2xl font-extrabold mb-6 animate-fade-in-down">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-4 md:mb-6 animate-fade-in-down">
             A seamless process to transform your footage into actionable insights
           </h3>
         </div>
@@ -200,15 +200,15 @@ onUnmounted(() => {
 
           <!-- Box 1: Record -->
           <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-10 animate-fade-in-left">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
+            <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
               <!-- Number Badge -->
-              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-purple-600 to-pink-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-purple-600 to-pink-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg">
                 1
               </div>
-              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-2xl font-bold mb-4">
+              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-xl md:text-2xl font-bold mb-4">
                 Record
               </h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-sm md:text-base">
                 Capture your match or training session using any camera.
               </p>
             </div>
@@ -216,15 +216,15 @@ onUnmounted(() => {
 
           <!-- Box 2: Upload -->
           <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-10 animate-fade-in-up">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
+            <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
               <!-- Number Badge -->
-              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-blue-600 to-cyan-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-blue-600 to-cyan-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg">
                 2
               </div>
-              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 text-2xl font-bold mb-4">
+              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 text-xl md:text-2xl font-bold mb-4">
                 Upload
               </h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-sm md:text-base">
                 Easily upload your footage to the OmniMetrics platform.
               </p>
             </div>
@@ -232,15 +232,15 @@ onUnmounted(() => {
 
           <!-- Box 3: AI -->
           <div class="bg-gradient-to-r from-green-600 to-teal-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-10 animate-fade-in-up">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
+            <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
               <!-- Number Badge -->
-              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-green-600 to-teal-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-green-600 to-teal-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg">
                 3
               </div>
-              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 text-2xl font-bold mb-4">
+              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600 text-xl md:text-2xl font-bold mb-4">
                 AI Analysis
               </h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-sm md:text-base">
                 Our AI processes the footage and extracts key insights.
               </p>
             </div>
@@ -248,15 +248,15 @@ onUnmounted(() => {
 
           <!-- Box 4: Insights -->
           <div class="bg-gradient-to-r from-yellow-600 to-orange-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 z-10 animate-fade-in-right">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
+            <div class="bg-gray-900 p-6 md:p-8 rounded-3xl h-full flex flex-col items-center justify-center text-center relative">
               <!-- Number Badge -->
-              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-yellow-600 to-orange-600 w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg">
+              <div class="absolute -top-4 -left-4 bg-gradient-to-r from-yellow-600 to-orange-600 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg">
                 4
               </div>
-              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600 text-2xl font-bold mb-4">
+              <h3 class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600 text-xl md:text-2xl font-bold mb-4">
                 Insights Delivered
               </h3>
-              <p class="text-gray-300">
+              <p class="text-gray-300 text-sm md:text-base">
                 Receive actionable insights to elevate your team's performance.
               </p>
             </div>
