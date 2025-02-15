@@ -1,103 +1,133 @@
 <script setup lang="ts">
-// No need to import the Logo component anymore
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const actionPoints = ref([
+  { number: '01', text: 'Automated Highlight Generation' },
+  { number: '02', text: 'Tactical Pattern Recognition' },
+  { number: '03', text: 'Performance Insights' },
+])
+
+const imageSrc = ref('/src/assets/img/football-trainer-platform.jpg')
+const isSecondSectionVisible = ref(false)
+const hasScrolled = ref(false)
+
+const handleScroll = () => {
+  if (!hasScrolled.value) {
+    const secondSection = document.getElementById('game-analysis-section')
+    if (secondSection) {
+      const rect = secondSection.getBoundingClientRect()
+      if (rect.top <= window.innerHeight * 0.75) {
+        isSecondSectionVisible.value = true
+        hasScrolled.value = true
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
   <div class="bg-gray-900 text-white">
     <!-- Hero Section -->
-    <section class="w-full text-gray-100 py-16 px-4 bg-gray-900">
-      <!-- Main Heading -->
-      <h1 class="text-center text-4xl md:text-5xl font-bold text-accent mb-4 uppercase">
-        UNLOCK YOUR TEAM'S FULL POTENTIAL
+    <section class="w-full text-gray-100 py-20 px-4 bg-gray-900">
+      <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-gradient bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 mb-6 animate-fade-in-down">
+        Unlock Your Team's Full Potential
       </h1>
-
-      <!-- Subheading / Tagline -->
-      <p class="max-w-3xl mx-auto text-center text-sm md:text-lg text-gray-300 leading-relaxed uppercase">
-        Our platform provides advanced, AI-driven analysis that helps coaches
-        and players understand the game from every angle. Whether it's
-        in-possession, out-of-possession, or player fitness metrics.
+      <p class="max-w-3xl mx-auto text-center text-lg md:text-xl text-gray-300 leading-relaxed animate-fade-in-up">
+        Our platform provides advanced, AI-driven analysis that helps coaches and players understand the game from every angle. 
+        From real-time metrics to post-game analysis, we've got you covered.
       </p>
     </section>
 
-    <!-- Metrics Section -->
+    <!-- Real-time Metrics Section -->
     <section class="py-16 bg-gray-900">
       <div class="container mx-auto px-4">
-        <!-- Grid Layout for Metrics -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-8 text-center animate-fade-in-down">
+          Real-time Game Metrics
+        </h2>
+        <p class="max-w-2xl mx-auto text-center text-lg text-gray-300 mb-12 animate-fade-in-up">
+          Capture and analyze crucial data as the game unfolds, providing instant insights to inform strategic decisions.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- In-Possession Metrics -->
-          <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full">
-              <h2 class="text-2xl font-bold text-white mb-4">
-                GAIN THE UPPER HAND WHEN YOUR TEAM HAS THE BALL
-              </h2>
-              <p class="text-gray-300 mb-6">
-                Track how long and effectively your team maintains control.
-                Measure passing accuracy, key passes, and distribution. Analyze
-                success rates and distances covered during dribbles.
-              </p>
-              <h3 class="text-xl font-semibold text-white uppercase mb-4">
-                IN-POSSESSION METRICS
-              </h3>
-              <div class="border-t border-gray-600 w-16 mb-6"></div>
-              <div class="grid grid-cols-2 gap-4">
-                <p class="text-purple-400 font-bold text-lg">POSSESSION</p>
-                <p class="text-purple-400 font-bold text-lg">PASSING</p>
-                <p class="text-purple-400 font-bold text-lg">DRIBBLING</p>
-                <p class="text-purple-400 font-bold text-lg">SHOOTING</p>
-                <p class="text-purple-400 font-bold text-lg">MOVEMENT</p>
-                <p class="text-purple-400 font-bold text-lg">SET-PIECES</p>
+          <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 transition-transform animate-fade-in-left">
+            <div class="bg-gray-900 p-6 rounded-3xl h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3 text-center">
+                  Offensive Dynamics
+                </h3>
+                <p class="text-gray-300 mb-4 text-center">
+                  Track possession, passing accuracy, and attacking movements in real-time.
+                </p>
+              </div>
+              <div>
+                <div class="border-t border-gray-600 w-16 mb-4 mx-auto"></div>
+                <div class="grid grid-cols-2 gap-2 text-center">
+                  <p class="text-blue-400 font-bold text-base">Possession</p>
+                  <p class="text-blue-400 font-bold text-base">Passing</p>
+                  <p class="text-blue-400 font-bold text-base">Dribbling</p>
+                  <p class="text-blue-400 font-bold text-base">Shooting</p>
+                  <p class="text-blue-400 font-bold text-base">Movement</p>
+                  <p class="text-blue-400 font-bold text-base">Set-Pieces</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Out-of-Possession Metrics -->
-          <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full">
-              <h2 class="text-2xl font-bold text-white mb-4">
-                DICTATE THE GAME THROUGH DEFENSIVE PRECISION
-              </h2>
-              <p class="text-gray-300 mb-6">
-                See how well your team presses and forces turnovers. Monitor
-                defensive actions and successful ball recoveries. Track your
-                players' one-on-one challenges and successes.
-              </p>
-              <h3 class="text-xl font-semibold text-white uppercase mb-4">
-                OUT-OF-POSSESSION METRICS
-              </h3>
-              <div class="border-t border-gray-600 w-16 mb-6"></div>
-              <div class="grid grid-cols-2 gap-4">
-                <p class="text-blue-400 font-bold text-lg">PRESSING</p>
-                <p class="text-blue-400 font-bold text-lg">TACKLING</p>
-                <p class="text-blue-400 font-bold text-lg">INTERCEPTION</p>
-                <p class="text-blue-400 font-bold text-lg">RECOVERY</p>
-                <p class="text-blue-400 font-bold text-lg">POSITIONING</p>
-                <p class="text-blue-400 font-bold text-lg">SET-PIECES</p>
+          <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 transition-transform animate-fade-in-up">
+            <div class="bg-gray-900 p-6 rounded-3xl h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3 text-center">
+                  Defensive Prowess
+                </h3>
+                <p class="text-gray-300 mb-4 text-center">
+                  Monitor pressing efficiency, defensive actions, and ball recoveries as they happen.
+                </p>
+              </div>
+              <div>
+                <div class="border-t border-gray-600 w-16 mb-4 mx-auto"></div>
+                <div class="grid grid-cols-2 gap-2 text-center">
+                  <p class="text-purple-400 font-bold text-base">Pressing</p>
+                  <p class="text-purple-400 font-bold text-base">Tackling</p>
+                  <p class="text-purple-400 font-bold text-base">Interceptions</p>
+                  <p class="text-purple-400 font-bold text-base">Recovery</p>
+                  <p class="text-purple-400 font-bold text-base">Positioning</p>
+                  <p class="text-purple-400 font-bold text-base">Set-Pieces</p>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Fitness Metrics -->
-          <div class="bg-gradient-to-r from-green-600 to-teal-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <div class="bg-gray-900 p-8 rounded-3xl h-full">
-              <h2 class="text-2xl font-bold text-white mb-4">
-                KEEP YOUR TEAM PERFORMING AT THEIR PEAK
-              </h2>
-              <p class="text-gray-300 mb-6">
-                Track every meter your players run during games or training
-                sessions. Monitor each player's sprinting capabilities. Gain
-                insights into explosive movements and recoveries.
-              </p>
-              <h3 class="text-xl font-semibold text-white uppercase mb-4">
-                FITNESS METRICS
-              </h3>
-              <div class="border-t border-gray-600 w-16 mb-6"></div>
-              <div class="grid grid-cols-2 gap-4">
-                <p class="text-green-400 font-bold text-lg">DISTANCE</p>
-                <p class="text-green-400 font-bold text-lg">TOP SPEED</p>
-                <p class="text-green-400 font-bold text-lg">ACCELERATION</p>
-                <p class="text-green-400 font-bold text-lg">DECELERATION</p>
-                <p class="text-green-400 font-bold text-lg">WORK RATE</p>
-                <p class="text-green-400 font-bold text-lg">PLAYER LOAD</p>
+          <div class="bg-gradient-to-r from-green-600 to-teal-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105 transition-transform animate-fade-in-right">
+            <div class="bg-gray-900 p-6 rounded-3xl h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-3 text-center">
+                  Player Performance
+                </h3>
+                <p class="text-gray-300 mb-4 text-center">
+                  Instantly access individual player stats, including distance covered and sprint data.
+                </p>
+              </div>
+              <div>
+                <div class="border-t border-gray-600 w-16 mb-4 mx-auto"></div>
+                <div class="grid grid-cols-2 gap-2 text-center">
+                  <p class="text-green-400 font-bold text-base">Distance</p>
+                  <p class="text-green-400 font-bold text-base">Top Speed</p>
+                  <p class="text-green-400 font-bold text-base">Acceleration</p>
+                  <p class="text-green-400 font-bold text-base">Deceleration</p>
+                  <p class="text-green-400 font-bold text-base">Work Rate</p>
+                  <p class="text-green-400 font-bold text-base">Player Load</p>
+                </div>
               </div>
             </div>
           </div>
@@ -105,37 +135,112 @@
       </div>
     </section>
 
-    <!-- Game Highlights Section -->
-    <section class="py-16 bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="text-center">
-          <h2 class="text-4xl font-bold text-white mb-4">
-            GAME HIGHLIGHTS & TACTICAL RECOGNITION
+    <!-- Game Analysis Section -->
+    <section id="game-analysis-section" class="py-16 md:py-24 bg-gray-900 transition-all duration-1000 ease-in-out" :class="{ 'opacity-0 translate-y-10': !isSecondSectionVisible, 'opacity-100 translate-y-0': isSecondSectionVisible }">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16 animate-fade-in-down">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-4 leading-tight">
+            Advanced Game Analysis
           </h2>
-          <p class="max-w-2xl mx-auto text-gray-300">
-            Relive the key moments of your game with automatically generated
-            highlights, tactical recognition, and in-depth analytics. Whether it's
-            a transition, build-up, or scoring chance, OmniMetrics spots the
-            action for you with precise metrics and performance insights.
+          <p class="max-w-2xl mx-auto text-gray-300 text-lg">
+            Dive deep into your team's performance with our cutting-edge post-game analysis tools. 
+            Automatically generate highlights, recognize tactical patterns, and gain actionable insights.
           </p>
         </div>
-        <div class="mt-12 flex flex-col md:flex-row items-center gap-8">
-          <div class="w-full md:w-1/2">
-            <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <img
-                src="/src/assets/img/football-trainer-platform.jpg"
-                alt="Game Highlight"
-                class="rounded-3xl w-full h-auto"
-              />
+        <div class="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+          <div class="w-full lg:w-1/2 animate-fade-in-left">
+            <div class="relative group">
+              <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300 group-hover:duration-200"></div>
+              <div class="relative">
+                <img
+                  :src="imageSrc"
+                  alt="Game Analysis Visualization"
+                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                />
+              </div>
             </div>
           </div>
-          <div class="w-full md:w-1/2 text-left">
-            <p class="text-5xl font-extrabold uppercase text-gray-400">DYNAMIC</p>
-            <p class="text-5xl font-extrabold uppercase text-gray-400 mt-4">EFFORTLESS</p>
-            <p class="text-5xl font-extrabold uppercase text-gray-400 mt-4">ACTIONABLE</p>
+          <div class="w-full lg:w-1/2 animate-fade-in-right">
+            <div class="grid grid-cols-1 gap-8">
+              <div v-for="(point, index) in actionPoints" :key="index" class="flex items-center space-x-4 group">
+                <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-xl font-bold text-white">{{ point.number }}</span>
+                </div>
+                <p class="text-xl md:text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                  {{ point.text }}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </div>
 </template>
+
+<style>
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.animate-fade-in-left {
+  animation: fadeInLeft 0.5s ease-out;
+}
+
+.animate-fade-in-right {
+  animation: fadeInRight 0.5s ease-out;
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+</style>
