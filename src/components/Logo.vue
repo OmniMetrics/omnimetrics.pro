@@ -21,7 +21,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-/* No styles needed as Tailwind CSS is used */
-</style>
