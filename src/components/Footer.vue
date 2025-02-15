@@ -1,23 +1,23 @@
 <template>
-  <footer class="bg-primary text-white py-20">
+  <footer class="bg-primary text-white py-12 md:py-20">
     <!-- Divider with Animated Circle -->
     <section class="relative flex items-center justify-center">
       <div class="absolute w-full h-0.5 bg-white opacity-20"></div>
-      <div class="w-32 h-32 border-2 border-white rounded-full bg-transparent flex items-center justify-center animate-pulse-circle">
+      <div class="w-24 h-24 md:w-32 md:h-32 border-2 border-white rounded-full bg-transparent flex items-center justify-center animate-pulse-circle">
         <!-- Single Circle -->
       </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section class="flex flex-col items-center justify-center mt-20 relative">
-      <h2 class="text-4xl font-bold text-secondary uppercase text-center z-30">
+    <section class="flex flex-col items-center justify-center mt-12 md:mt-20 relative px-4">
+      <h2 class="text-2xl md:text-4xl font-bold text-secondary uppercase text-center z-30">
         READY TO ELEVATE YOUR PERFORMANCE?
       </h2>
       <button
-        class="bg-gradient-to-r from-secondary to-accent font-bold uppercase rounded-full p-0.5 mt-8 z-30 hover:scale-105 transition-transform duration-300"
+        class="bg-gradient-to-r from-secondary to-accent font-bold uppercase rounded-full p-0.5 mt-6 md:mt-8 z-30 hover:scale-105 transition-transform duration-300"
       >
         <span
-          class="flex py-4 px-24 w-full text-sm text-white bg-transparent rounded-full hover:bg-opacity-10 transition-colors duration-300"
+          class="flex py-3 px-12 md:py-4 md:px-24 w-full text-sm text-white bg-transparent rounded-full hover:bg-opacity-10 transition-colors duration-300"
           @click="$emit('open-modal')"
         >
           DROP US A MESSAGE
@@ -27,7 +27,7 @@
 
     <!-- Social Media, Logo, and Tagline -->
     <div
-      class="container mx-auto mt-20 flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-12"
+      class="container mx-auto mt-12 md:mt-20 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 px-4"
     >
       <!-- Social Media Logos -->
       <div class="flex space-x-6">
@@ -40,7 +40,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
-            class="h-8 w-8"
+            class="h-6 w-6 md:h-8 md:w-8"
             fill="currentColor"
           >
             <path
@@ -57,7 +57,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
-            class="h-8 w-8"
+            class="h-6 w-6 md:h-8 md:w-8"
             fill="currentColor"
           >
             <path
@@ -74,7 +74,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 50 50"
-            class="h-8 w-8"
+            class="h-6 w-6 md:h-8 md:w-8"
             fill="currentColor"
           >
             <path
@@ -91,7 +91,7 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 97.707 97.707"
-            class="h-8 w-8"
+            class="h-6 w-6 md:h-8 md:w-8"
             fill="currentColor"
           >
             <path
@@ -102,12 +102,12 @@
       </div>
 
       <!-- Company Logo -->
-      <div class="hover:scale-110 transition-transform duration-300">
-        <img src="/src/assets/logo.svg" alt="OmniMetrics Logo" class="h-8" />
+      <div class="hover:scale-110 transition-transform duration-300 mt-6 md:mt-0">
+        <img src="/src/assets/logo.svg" alt="OmniMetrics Logo" class="h-6 md:h-8" />
       </div>
 
       <!-- #PLATFORMYOURGAME -->
-      <div class="text-secondary uppercase text-lg font-bold hover:text-accent transition-colors duration-300">
+      <div class="text-secondary uppercase text-base md:text-lg font-bold hover:text-accent transition-colors duration-300 mt-6 md:mt-0">
         #PLATFORMYOURGAME
       </div>
     </div>
