@@ -24,11 +24,10 @@
             <div class="relative border-l-4 border-gray-600 p-6 animate-fade-in-left">
               <h2 class="text-2xl font-bold mb-4 text-secondary">Our Mission</h2>
               <p class="leading-relaxed md:text-lg">
-                We are on a mission to revolutionize football by making top-tier
-                performance analysis accessible to every club, regardless of size or
-                budget. Through our innovative platform, we aim to empower coaches,
-                players, and staff with the insights they need to improve, grow, and
-                succeed.
+                We aim to revolutionize football by making top-tier performance 
+                analysis accessible to all clubs, regardless of size or budget. 
+                Our goal is to empower coaches, players, and staff with 
+                the insights needed to improve, grow, and succeed.
               </p>
               <span class="pointer-events-none absolute top-0 left-0 w-1/2 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
               <span class="pointer-events-none absolute bottom-0 left-0 w-1/2 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>

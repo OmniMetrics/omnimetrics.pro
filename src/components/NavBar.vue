@@ -2,9 +2,9 @@
   <nav class="bg-primary text-white shadow-xl backdrop-blur-md bg-opacity-90">
     <div class="mx-auto flex justify-between items-center p-4 max-w-7xl">
       <!-- Logo on the Left -->
-      <div class="flex-shrink-0">
+      <router-link to="/" class="flex-shrink-0">
         <img src="/src/assets/logo.svg" alt="Logo" class="h-10 w-auto hover:scale-110 transition-transform duration-300" />
-      </div>
+      </router-link>
 
       <!-- Mobile Menu Button on the Right -->
       <button
@@ -39,7 +39,7 @@
       <!-- Content on the Right (Dropdown Menu) -->
       <div
         :class="{ 'hidden md:flex': !menuOpen, 'flex': menuOpen }"
-        class="absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto bg-primary md:bg-transparent flex-col md:flex md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-8 text-sm md:text-base transition-all duration-300 ease-in-out p-4 md:p-0"
+        class="absolute md:relative top-16 pb-8 mb:pb-0 md:top-0 left-0 w-full md:w-auto bg-primary md:bg-transparent flex-col md:flex md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-8 text-sm md:text-base transition-all duration-300 ease-in-out p-4 md:p-0"
       >
         <router-link
           to="/"
@@ -92,13 +92,19 @@ export default defineComponent({
     toggleMenu() {
       this.menuOpen = !this.menuOpen
       this.toggleBodyScroll()
+      const pageBody = document.querySelector('#page-body') as HTMLElement;
+      if (!this.menuOpen) pageBody.classList.remove('md:brightness-100', 'brightness-50');
+      else pageBody.classList.add('md:brightness-100', 'brightness-50');
     },
     closeMenu() {
       this.menuOpen = false
       this.toggleBodyScroll()
+      const pageBody = document.querySelector('#page-body') as HTMLElement;
+      pageBody.classList.remove('md:brightness-100', 'brightness-50');
     },
     toggleBodyScroll() {
-      document.body.style.overflow = this.menuOpen ? 'hidden' : 'auto'
+      if (this.menuOpen) document.body.classList.add('overflow-hidden', 'md:overflow-auto')
+      else document.body.classList.remove('overflow-hidden')
     },
   },
 })

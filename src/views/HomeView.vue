@@ -101,7 +101,7 @@ onUnmounted(() => {
           class="w-full h-auto"
         />
         <img
-          src="/src/assets/img/home-main.jpg"
+          src="/src/assets/img/home-main.png"
           alt="Platform Interface"
           class="w-3/4 h-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
@@ -114,7 +114,7 @@ onUnmounted(() => {
         <!-- Left Column: Platform Demo Image -->
         <div class="md:flex md:w-1/3 md:mt-0 justify-center items-center animate-fade-in-left">
           <img
-            src="/src/assets/img/player-track.png"
+            src="/src/assets/img/home-player-track.png"
             alt="Platform Demo"
             class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
           />
@@ -181,8 +181,8 @@ onUnmounted(() => {
       <!-- 3d Picture -->
 
     <div>
-      <img src="/src/assets/img/3d-match.png" alt="3d" 
-      class="w-4/5 mx-auto p-1 mt-12 transform hover:scale-105 transition-transform duration-300" />
+      <img src="/src/assets/img/home-3d-match.png" alt="3d" 
+      class="w-full md:w-4/5 mx-auto p-4 md:p-0 mt-12 transform hover:scale-105 transition-transform duration-300" />
     </div>
 
     <!-- AI Workflow Section -->

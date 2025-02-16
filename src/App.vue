@@ -17,7 +17,7 @@ const handleOpenModal = () => {
   <NavBar @open-modal="handleOpenModal" class="z-50 relative" />
 
   <!-- Body -->
-  <div class="xl:px-20 max-w-screen-xl mx-auto">
+  <div id="page-body" class="xl:px-20 max-w-screen-xl mx-auto">
     <RouterView @open-modal="handleOpenModal" />
   </div>
 
