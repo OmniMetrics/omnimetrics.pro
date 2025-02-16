@@ -160,7 +160,7 @@ onUnmounted(() => {
                 <img
                   src="/src/assets/img/features-football-trainer-platform.jpg"
                   alt="Game Analysis Visualization"
-                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform"
                 />
               </div>
             </div>
@@ -198,7 +198,7 @@ onUnmounted(() => {
                 <img
                   src="/src/assets/img/features-football-trainer-locker-room.jpg"
                   alt="Game Analysis Visualization"
-                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105"
+                  class="rounded-2xl w-full h-auto shadow-lg group-hover:shadow-xl transition-all duration-300 transform"
                 />
               </div>
             </div>

@@ -116,7 +116,7 @@ onUnmounted(() => {
           <img
             src="/src/assets/img/home-player-track.png"
             alt="Platform Demo"
-            class="w-full h-auto rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+            class="w-full h-auto rounded-lg shadow-lg transform transition-transform duration-300"
           />
         </div>
 
@@ -182,7 +182,7 @@ onUnmounted(() => {
 
     <div>
       <img src="/src/assets/img/home-3d-match.png" alt="3d" 
-      class="w-full md:w-4/5 mx-auto p-4 md:p-0 mt-12 transform hover:scale-105 transition-transform duration-300" />
+      class="w-full md:w-4/5 mx-auto p-4 md:p-0 mt-12 transform transition-transform duration-300" />
     </div>
 
     <!-- AI Workflow Section -->
