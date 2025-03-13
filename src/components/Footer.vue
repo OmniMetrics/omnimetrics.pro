@@ -49,7 +49,7 @@
           </svg>
         </a>
         <a
-          href="https://pt.linkedin.com/company/omnimetrics-wherefootballmeetsintelligence"
+          href="https://pt.linkedin.com/company/omnimetricspro"
           target="_blank"
           rel="noopener noreferrer"
           class="hover:scale-110 transition-transform duration-300"
