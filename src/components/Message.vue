@@ -102,7 +102,7 @@
 
           <!-- LinkedIn -->
           <a
-            href="https://pt.linkedin.com/company/omnimetrics-wherefootballmeetsintelligence"
+            href="https://pt.linkedin.com/company/omnimetricspro"
             target="_blank"
             rel="noopener noreferrer"
             class="text-gray-300 hover:text-accent transition-colors duration-300"
