@@ -66,7 +66,7 @@
           </svg>
         </a>
         <a
-          href="https://www.instagram.com/omnimetrics_ai/"
+          href="https://www.instagram.com/omnimetrics.pro/"
           target="_blank"
           rel="noopener noreferrer"
           class="hover:scale-110 transition-transform duration-300"
