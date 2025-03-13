@@ -121,7 +121,7 @@
 
           <!-- Instagram -->
           <a
-            href="https://www.instagram.com/omnimetrics_ai/"
+            href="https://www.instagram.com/omnimetrics.pro/"
             target="_blank"
             rel="noopener noreferrer"
             class="text-gray-300 hover:text-accent transition-colors duration-300"
