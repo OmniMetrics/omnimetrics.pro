@@ -136,6 +136,34 @@
             />
           </div>
         </div>
+
+        <!-- Paulo Ribeiro -->
+        <div class="flex flex-col-reverse md:flex-row mx-auto items-start w-full max-w-5xl py-8">
+          <div class="w-full md:w-1/3 mt-6 md:mt-0 md:pl-4 flex justify-center md:justify-start animate-fade-in-left">
+            <img
+              src="/src/assets/img/about-paulinho.png"
+              alt="Paulo Ribeiro"
+              class="rounded-lg shadow-lg max-w-xs"
+            />
+          </div>
+          <div class="w-full md:w-2/3 md:pl-8 text-right">
+            <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-right">
+              Paulo Ribeiro
+            </h2>
+            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl animate-fade-in-right">
+              <p>
+                Paulo brings a deep focus on precision, performance, and problem-solving.
+                With expertise in AI and a meticulous approach, he aims for robust and efficient solutions.
+                His commitment to excellence and attention to detail ensure the platform meets the highest standards.
+              </p>
+              <span class="pointer-events-none absolute top-0 right-0 w-2/3 h-[6px] bg-gradient-to-l from-gray-600 to-transparent" aria-hidden="true"></span>
+              <span class="pointer-events-none absolute bottom-0 right-0 w-2/3 h-[6px] bg-gradient-to-l from-gray-600 to-transparent" aria-hidden="true"></span>
+              <div class="mt-4 text-md text-gray-400">
+                MSc in Computer Science
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </div>
