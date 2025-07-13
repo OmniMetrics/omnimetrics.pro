@@ -50,7 +50,7 @@
       <img
         src="/src/assets/img/match-statistics.png"
         alt="Analytics Statistics View"
-        class="w-11/12 md:w-2/5 rounded-3xl shadow-2xl animate-fade-in-up"
+        class="w-11/12 md:w-2/5 rounded-3xl animate-fade-in-up"
       />
     </section>
 
