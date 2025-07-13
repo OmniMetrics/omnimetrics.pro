@@ -7,10 +7,10 @@
     <div class="relative z-10 w-full min-h-screen">
       <!-- Header Section -->
       <section class="w-full text-gray-100 py-20 px-4 bg-gray-900">
-        <h1 class="text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-down">
+        <h1 class="text-5xl font-bold text-center mb-6 animate-fade-in-down">
           The OmniMetrics Team
         </h1>
-        <p class="max-w-3xl mx-auto text-center text-lg md:text-xl text-gray-300 leading-relaxed animate-fade-in-up">
+        <p class="max-w-3xl mx-auto text-center text-lg text-gray-300 leading-relaxed animate-fade-in-up">
           Founded by experts in football, AI and software engineering, we bring together cutting-edge tech with real-world experience to help every club win - on and off the pitch.
         </p>
       </section>
@@ -21,8 +21,8 @@
           <!-- Mission -->
           <div class="w-full md:w-1/2">
             <div class="relative border-l-4 border-gray-600 p-6 animate-fade-in-left">
-              <h2 class="text-2xl font-bold mb-4 text-secondary">Our Mission</h2>
-              <p class="leading-relaxed md:text-lg text-gray-300">
+              <h2 class="text-3xl font-bold mb-4 text-secondary">Our Mission</h2>
+              <p class="leading-relaxed text-lg text-gray-300">
                 Democratize elite-level performance analysis so clubs of any size can harness AI-driven insights and raise their game.
               </p>
               <span class="pointer-events-none absolute top-0 left-0 w-1/2 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
@@ -33,8 +33,8 @@
           <!-- Vision -->
           <div class="w-full md:w-1/2">
             <div class="relative border-r-4 border-gray-600 p-6 text-right animate-fade-in-right">
-              <h2 class="text-2xl font-bold mb-4 text-secondary">Our Vision</h2>
-              <p class="leading-relaxed md:text-lg text-gray-300">
+              <h2 class="text-3xl font-bold mb-4 text-secondary">Our Vision</h2>
+              <p class="leading-relaxed text-lg text-gray-300">
                 Build a future where every football decision - tactical, strategic or commercial - is backed by fast, affordable, actionable data.
               </p>
               <span class="pointer-events-none absolute top-0 right-0 w-1/2 h-[6px] bg-gradient-to-l from-gray-600 to-transparent" aria-hidden="true"></span>
@@ -52,7 +52,7 @@
             <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-left">
               Pedro Brito
             </h2>
-            <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl animate-fade-in-left">
+            <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-left">
               <p>
                 Pedro brings years of federated football experience from the UK and Portugal, offering deep tactical and strategic expertise. With a BSc in Football Studies, he empowers clubs at all levels with insights to optimize performance and gain a competitive edge.
               </p>
@@ -85,7 +85,7 @@
             <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-right">
               Eduardo Brito
             </h2>
-            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl animate-fade-in-right">
+            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-right">
               <p>
                 Eduardo leads platform development, transforming football data into actionable insights. With his AI and software engineering expertise, he is committed to empowering teams to enhance performance through continuous technological innovation.
               </p>
@@ -104,7 +104,7 @@
             <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-left">
               Samuel Fernandes
             </h2>
-            <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl animate-fade-in-left">
+            <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-left">
               <p>
                 Samuel combines years of experience in building large-scale distributed systems, AI, and computer vision algorithms with a passion for football and real-time data insights. He is dedicated to leveraging advanced technologies to optimize performance and secure a strategic advantage in the market.
               </p>
@@ -137,7 +137,7 @@
             <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-right">
               Paulo Ribeiro
             </h2>
-            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed md:text-xl animate-fade-in-right">
+            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-right">
               <p>
                 Paulo brings a deep focus on precision, performance, and problem-solving.
                 With expertise in AI and a meticulous approach, he aims for robust and efficient solutions.
