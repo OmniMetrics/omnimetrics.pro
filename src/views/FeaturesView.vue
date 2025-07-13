@@ -7,16 +7,50 @@
         Unlock Your Team's Full Potential
       </h1>
       <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8 animate-fade-in-up">
-        OmniMetrics turns your match video into immediate, actionable insights - from real-time metrics to advanced post-game analysis.
+        OmniMetrics turns your match video into immediate, actionable insights - real-time metrics through advanced post-game analysis.
       </p>
     </section>
 
-    <!-- 3D Analytics Graphic (smaller) -->
-    <section class="w-full py-8 px-4 flex justify-center">
+    <!-- Split 3D Analytics Graphic -->
+    <section
+      class="w-full py-12 px-4 flex flex-col items-center justify-center space-y-6 md:space-y-0 md:flex-row md:space-x-8"
+    >
+      <!-- Frame Image -->
       <img
-        src="/src/assets/img/home-3d-match.png"
-        alt="OmniMetrics 3D Match Analytics"
-        class="w-3/4 md:w-2/5 rounded-3xl shadow-2xl animate-fade-in-up"
+        src="/src/assets/img/match-frame.png"
+        alt="Match Frame View"
+        class="w-11/12 md:w-2/5 rounded-3xl shadow-2xl animate-fade-in-up"
+      />
+
+      <!-- Double Right Arrow (desktop) -->
+      <div class="hidden md:flex items-center justify-center">
+        <svg
+          class="w-12 h-12 text-blue-400 animate-pulse"
+          fill="none" stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+        </svg>
+      </div>
+
+      <!-- Double Down Arrow (mobile) -->
+      <div class="flex md:hidden items-center justify-center">
+        <svg
+          class="w-12 h-12 text-blue-400 animate-pulse transform rotate-90"
+          fill="none" stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+        </svg>
+      </div>
+
+      <!-- Statistics Image -->
+      <img
+        src="/src/assets/img/match-statistics.png"
+        alt="Analytics Statistics View"
+        class="w-11/12 md:w-2/5 rounded-3xl shadow-2xl animate-fade-in-up"
       />
     </section>
 
