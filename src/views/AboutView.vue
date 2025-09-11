@@ -160,7 +160,7 @@
             </h2>
             <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-left">
               <p>
-Hugo is a dedicated computer engineer with expertise in software testing, distributed systems, and scalable application development. He thrives on tackling complex challenges with innovative solutions, ensuring reliability and performance.           </p>
+                Hugo is a dedicated computer engineer with expertise in software testing, distributed systems, and scalable application development. He thrives on tackling complex challenges with innovative solutions, ensuring reliability and performance.           </p>
               <span class="pointer-events-none absolute top-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
               <span class="pointer-events-none absolute bottom-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
               <div class="mt-4 text-md text-gray-400">
@@ -174,6 +174,33 @@ Hugo is a dedicated computer engineer with expertise in software testing, distri
               alt="Hugo Guimarães"
               class="rounded-lg shadow-lg max-w-xs max-h-96"
             />
+          </div>
+        </div>
+
+        <!-- Pedro Ferreira -->
+        <div class="flex flex-col-reverse md:flex-row mx-auto items-start w-full max-w-5xl py-8">
+          <div class="w-full md:w-1/3 mt-6 md:mt-0 md:pl-4 flex justify-center md:justify-start animate-fade-in-left">
+            <img
+              src="/src/assets/img/about-pedro-f.png"
+              alt="Pedro Ferreira"
+              class="rounded-lg shadow-lg max-w-xs"
+            />
+          </div>
+          <div class="w-full md:w-2/3 md:pl-8 text-right">
+            <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-right">
+              Pedro Ferreira
+            </h2>
+            <div class="relative border-r-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-right">
+              <p>
+                Pedro brings expertise in AI, computer vision, and image captioning to extract and interpret meaningful insights from football’s visual data. 
+                Passionate about combining advanced technology with the sport, he is dedicated to enhancing performance analysis and unlocking new perspectives through innovation.
+              </p>
+              <span class="pointer-events-none absolute top-0 right-0 w-2/3 h-[6px] bg-gradient-to-l from-gray-600 to-transparent" aria-hidden="true"></span>
+              <span class="pointer-events-none absolute bottom-0 right-0 w-2/3 h-[6px] bg-gradient-to-l from-gray-600 to-transparent" aria-hidden="true"></span>
+              <div class="mt-4 text-md text-gray-400">
+                MSc in Computer Science
+              </div>
+            </div>
           </div>
         </div>
       </section>
