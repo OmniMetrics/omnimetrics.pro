@@ -151,6 +151,31 @@
             </div>
           </div>
         </div>
+
+        <!-- Hugo Guimarães -->
+        <div class="flex flex-col md:flex-row mx-auto items-center w-full max-w-5xl py-8">
+          <div class="w-full md:w-2/3 md:pr-4">
+            <h2 class="text-2xl font-bold text-secondary tracking-wider mb-2 animate-fade-in-left">
+              Hugo Guimarães
+            </h2>
+            <div class="relative border-l-4 border-gray-600 p-6 text-gray-200 leading-relaxed text-lg animate-fade-in-left">
+              <p>
+Hugo is a dedicated computer engineer with expertise in software testing, distributed systems, and scalable application development. He thrives on tackling complex challenges with innovative solutions, ensuring reliability and performance.           </p>
+              <span class="pointer-events-none absolute top-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
+              <span class="pointer-events-none absolute bottom-0 left-0 w-2/3 h-[6px] bg-gradient-to-r from-gray-600 to-transparent" aria-hidden="true"></span>
+              <div class="mt-4 text-md text-gray-400">
+                MSc in Computer Science
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 mt-6 md:mt-0 flex justify-center animate-fade-in-right">
+            <img
+              src="/src/assets/img/about-hugo.png"
+              alt="Hugo Guimarães"
+              class="rounded-lg shadow-lg max-w-xs max-h-96"
+            />
+          </div>
+        </div>
       </section>
     </div>
   </div>
