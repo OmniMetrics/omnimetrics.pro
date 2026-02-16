@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-om-bg text-om-text font-sans;
+  }
+  ::selection {
+    background: rgba(118, 205, 242, 0.25);
+  }
+}
+
+@layer components {
+  .om-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .om-card {
+    @apply rounded-2xl border border-om-border bg-om-surface2 backdrop-blur shadow-soft;
+  }
+
+  .om-pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-om-border bg-om-surface/60 px-3 py-1 text-xs text-om-muted;
+  }
+
+  .om-h1 {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl tracking-tight;
+  }
+
+  .om-h2 {
+    @apply font-display text-2xl sm:text-3xl tracking-tight;
+  }
+
+  .om-h3 {
+    @apply font-display text-xl sm:text-2xl tracking-tight;
+  }
+
+  .om-p {
+    @apply text-om-muted leading-relaxed;
+  }
+
+  .om-link {
+    @apply text-om-cyan hover:text-white transition-colors;
+  }
+
+  .om-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition;
+  }
+
+  .om-btn-primary {
+    @apply om-btn bg-gradient-to-r from-secondary to-accent text-om-bg shadow-glow hover:brightness-110;
+  }
+
+  .om-btn-secondary {
+    @apply om-btn border border-om-border bg-om-surface/60 text-white hover:bg-om-surface2;
+  }
+}

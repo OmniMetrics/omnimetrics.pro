@@ -1,29 +1,36 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import Footer from './components/Footer.vue'
-import Message from './components/Message.vue'
-import { ref } from 'vue';
+import { ref } from 'vue'
+import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
+import ContactModal from '@/components/ContactModal.vue'
 
-let isModalVisible = ref(false)
-
-const handleOpenModal = () => {
-  isModalVisible.value = true;
-}
+const isContactOpen = ref(false)
+const openContact = () => (isContactOpen.value = true)
+const closeContact = () => (isContactOpen.value = false)
 </script>
 
 <template>
-  <!-- Navbar-->
-  <NavBar @open-modal="handleOpenModal" class="z-50 relative" />
+  <div class="min-h-screen bg-om-bg text-om-text">
+    <div class="pointer-events-none fixed inset-0 bg-hero-radial"></div>
+    <div
+      class="pointer-events-none fixed inset-0 opacity-25"
+      style="
+        background-image: url('/home-section-bg.png');
+        background-size: cover;
+        background-position: center;
+      "
+    ></div>
+    <div class="pointer-events-none fixed inset-0 opacity-15 bg-surface-grid bg-grid"></div>
 
-  <!-- Body -->
-  <div id="page-body" class="xl:px-20 max-w-screen-xl mx-auto">
-    <RouterView @open-modal="handleOpenModal" />
+    <NavBar class="relative z-50" @open-contact="openContact" />
+
+    <main id="page-body" class="relative z-10">
+      <RouterView @open-contact="openContact" />
+    </main>
+
+    <Footer class="relative z-10" @open-contact="openContact" />
+
+    <ContactModal :visible="isContactOpen" @close="closeContact" />
   </div>
-
-  <!-- Footer -->
-  <Footer @open-modal="handleOpenModal" class="mt-12 relative"/>
-
-  <!-- Modal -->
-  <Message :visible="isModalVisible" @close="isModalVisible = false" />
 </template>

@@ -1,166 +1,144 @@
-<template>
-  <nav class="bg-primary text-white shadow-xl backdrop-blur-md bg-opacity-90">
-    <div class="mx-auto flex justify-between items-center p-4 max-w-7xl">
-      <!-- Logo on the Left -->
-      <router-link to="/" class="flex-shrink-0">
-        <img src="/src/assets/logo.svg" alt="Logo" class="h-10 w-auto hover:scale-110 transition-transform duration-300" />
-      </router-link>
-
-      <!-- Mobile Menu Button on the Right -->
-      <button
-        class="md:hidden text-white hover:text-gray-300 transition-colors"
-        @click="toggleMenu"
-        :aria-label="menuOpen ? 'Close menu' : 'Open menu'"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            v-if="!menuOpen"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-          <path
-            v-else
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-
-      <!-- Content on the Right (Dropdown Menu) -->
-      <div
-        :class="{ 'hidden md:flex': !menuOpen, 'flex': menuOpen }"
-        class="absolute md:relative top-16 pb-8 mb:pb-0 md:top-0 left-0 w-full md:w-auto bg-primary md:bg-transparent flex-col md:flex md:flex-row justify-end items-center space-y-4 md:space-y-0 md:space-x-8 text-sm md:text-base transition-all duration-300 ease-in-out p-4 md:p-0"
-      >
-        <router-link
-          to="/"
-          class="nav-link uppercase transition-colors duration-300"
-          :class="{ 'active-link': isActive('/') }"
-          @click="closeMenu"
-          >Home</router-link
-        >
-        <router-link
-          to="/features"
-          class="nav-link uppercase transition-colors duration-300"
-          :class="{ 'active-link': isActive('/features') }"
-          @click="closeMenu"
-          >Features</router-link
-        >
-        <router-link
-          to="/about"
-          class="nav-link uppercase transition-colors duration-300"
-          :class="{ 'active-link': isActive('/about') }"
-          @click="closeMenu"
-          >About Us</router-link
-        >
-        <button
-          class="bg-gradient-to-r from-secondary to-accent text-white px-6 py-2 rounded-full hover:bg-accent uppercase font-bold transition-all transform hover:scale-105 shadow-lg hover:shadow-accent/50"
-          @click="$emit('open-modal'); closeMenu()"
-        >
-          Join Om
-        </button>
-      </div>
-    </div>
-  </nav>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-export default defineComponent({
-  name: 'NavBar',
-  data() {
-    return {
-      menuOpen: false,
-    }
+const emit = defineEmits<{
+  (e: 'open-contact'): void
+}>()
+
+const route = useRoute()
+const mobileOpen = ref(false)
+const mobileSolutionsOpen = ref(false)
+
+const isActive = (path: string) => route.path === path
+
+const closeMobile = () => {
+  mobileOpen.value = false
+  mobileSolutionsOpen.value = false
+  document.body.classList.remove('overflow-hidden')
+}
+
+watch(
+  () => mobileOpen.value,
+  (v) => {
+    if (v) document.body.classList.add('overflow-hidden')
+    else document.body.classList.remove('overflow-hidden')
   },
-  methods: {
-    isActive(path: string) {
-      const route = useRoute()
-      return route.path === path
-    },
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen
-      this.toggleBodyScroll()
-      const pageBody = document.querySelector('#page-body') as HTMLElement;
-      if (!this.menuOpen) pageBody.classList.remove('md:brightness-100', 'brightness-50');
-      else pageBody.classList.add('md:brightness-100', 'brightness-50');
-    },
-    closeMenu() {
-      this.menuOpen = false
-      this.toggleBodyScroll()
-      const pageBody = document.querySelector('#page-body') as HTMLElement;
-      pageBody.classList.remove('md:brightness-100', 'brightness-50');
-    },
-    toggleBodyScroll() {
-      if (this.menuOpen) document.body.classList.add('overflow-hidden', 'md:overflow-auto')
-      else document.body.classList.remove('overflow-hidden')
-    },
-  },
+)
+
+const navLinkClass = computed(() => (path: string) => {
+  const base =
+    'text-sm font-semibold tracking-wide transition-colors px-3 py-2 rounded-full hover:bg-om-surface2'
+  return isActive(path) ? base + ' text-white bg-om-surface2' : base + ' text-om-muted hover:text-white'
 })
 </script>
 
-<style scoped>
-.nav-link {
-  position: relative;
-  padding: 0.5rem 0;
-}
+<template>
+  <header class="sticky top-0 z-50 border-b border-om-border/60 bg-om-bg/70 backdrop-blur">
+    <div class="om-container">
+      <div class="flex h-16 items-center justify-between">
+        <RouterLink to="/" class="flex items-center gap-3">
+          <img src="@/assets/logo.svg" alt="OmniMetrics" class="h-7 w-auto" />
+          <span class="hidden sm:inline font-display tracking-tight">OmniMetrics</span>
+        </RouterLink>
 
-.nav-link::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, theme('colors.secondary'), theme('colors.accent'));
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease-in-out;
-}
+        <!-- Desktop -->
+        <nav class="hidden md:flex items-center gap-1">
+          <div class="relative group">
+            <RouterLink :class="navLinkClass('/solutions')" to="/solutions">Solutions</RouterLink>
+            <div
+              class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-150 absolute left-0 mt-2 w-72"
+            >
+              <div class="om-card p-2">
+                <RouterLink
+                  to="/solutions/coach"
+                  class="block rounded-xl px-4 py-3 hover:bg-om-surface3 transition"
+                >
+                  <div class="font-semibold">AI Coach Assistant</div>
+                  <div class="text-sm text-om-muted">
+                    Real-time decision support for clubs and staff.
+                  </div>
+                </RouterLink>
+                <RouterLink
+                  to="/solutions/broadcast"
+                  class="block rounded-xl px-4 py-3 hover:bg-om-surface3 transition"
+                >
+                  <div class="font-semibold">AI Broadcast Assistant</div>
+                  <div class="text-sm text-om-muted">
+                    Real-time overlays, editorial support, and data feeds for broadcasters.
+                  </div>
+                </RouterLink>
+              </div>
+            </div>
+          </div>
 
-.nav-link:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
+          <RouterLink :class="navLinkClass('/platform')" to="/platform">Platform</RouterLink>
+          <RouterLink :class="navLinkClass('/company')" to="/company">Company</RouterLink>
 
-.nav-link:hover {
-  background-color: rgba(118, 205, 242, 0.1); /* Secondary color with transparency */
-  border-radius: 4px;
-}
+          <button class="ml-2 om-btn-secondary" @click="emit('open-contact')">Contact</button>
+          <button class="ml-2 om-btn-primary" @click="emit('open-contact')">Request demo</button>
+        </nav>
 
-.active-link {
-  color: theme('colors.secondary');
-  font-weight: bold;
-}
+        <!-- Mobile -->
+        <button
+          class="md:hidden inline-flex items-center justify-center rounded-full border border-om-border bg-om-surface/60 p-2"
+          aria-label="Open menu"
+          @click="mobileOpen = !mobileOpen"
+        >
+          <svg v-if="!mobileOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
 
-.active-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, theme('colors.secondary'), theme('colors.accent'));
-  animation: underline 0.3s ease-in-out;
-}
+    <!-- Mobile panel -->
+    <div v-if="mobileOpen" class="md:hidden border-t border-om-border/60 bg-om-bg/90 backdrop-blur">
+      <div class="om-container py-4">
+        <button
+          class="w-full flex items-center justify-between rounded-2xl border border-om-border bg-om-surface/60 px-4 py-3"
+          @click="mobileSolutionsOpen = !mobileSolutionsOpen"
+        >
+          <span class="font-semibold">Solutions</span>
+          <span class="text-om-muted">{{ mobileSolutionsOpen ? '−' : '+' }}</span>
+        </button>
 
-@keyframes underline {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-</style>
+        <div v-if="mobileSolutionsOpen" class="mt-2 space-y-2">
+          <RouterLink
+            to="/solutions/coach"
+            class="block om-card px-4 py-3 hover:bg-om-surface2 transition"
+            @click="closeMobile"
+          >
+            <div class="font-semibold">AI Coach Assistant</div>
+            <div class="text-sm text-om-muted">For clubs, coaches, and analysts.</div>
+          </RouterLink>
+          <RouterLink
+            to="/solutions/broadcast"
+            class="block om-card px-4 py-3 hover:bg-om-surface2 transition"
+            @click="closeMobile"
+          >
+            <div class="font-semibold">AI Broadcast Assistant</div>
+            <div class="text-sm text-om-muted">For TV channels, leagues, and media.</div>
+          </RouterLink>
+        </div>
+
+        <div class="mt-4 grid gap-2">
+          <RouterLink to="/platform" class="om-card px-4 py-3 hover:bg-om-surface2 transition" @click="closeMobile">
+            <div class="font-semibold">Platform</div>
+          </RouterLink>
+          <RouterLink to="/company" class="om-card px-4 py-3 hover:bg-om-surface2 transition" @click="closeMobile">
+            <div class="font-semibold">Company</div>
+          </RouterLink>
+        </div>
+
+        <div class="mt-4 flex gap-2">
+          <button class="flex-1 om-btn-secondary" @click="emit('open-contact')">Contact</button>
+          <button class="flex-1 om-btn-primary" @click="emit('open-contact')">Request demo</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>

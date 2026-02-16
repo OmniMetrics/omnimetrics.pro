@@ -1,248 +1,204 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useRoute } from 'vue-router'
+import PlaceholderFigure from '@/components/PlaceholderFigure.vue'
 
-const menuOpen = ref(false)
-const isHeroVisible = ref(false)
-const isDataVisible = ref(false)
-const isPlatformVisible = ref(false)
-const isWorkflowVisible = ref(false)
+import homeHero from '@/assets/img/home-hero.png'
+import pipelineDiagram from '@/assets/img/home-pipeline.png'
 
-const route = useRoute()
-const isActive = (path: string) => {
-  if (route.path === path) window.scrollTo({ top: 0, behavior: 'smooth' })
-  return route.path === path
-}
-
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value
-  document.body.style.overflow = menuOpen.value ? 'hidden' : 'auto'
-}
-
-const handleScroll = () => {
-  ;[
-    { id: 'hero-section', visible: isHeroVisible },
-    { id: 'data-section', visible: isDataVisible },
-    { id: 'platform-section', visible: isPlatformVisible },
-    { id: 'workflow-section', visible: isWorkflowVisible },
-  ].forEach(({ id, visible }) => {
-    const el = document.getElementById(id)
-    if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.75) {
-      visible.value = true
-    }
-  })
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-  handleScroll()
-})
-onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+const emit = defineEmits<{
+  (e: 'open-contact'): void
+}>()
 </script>
 
 <template>
-  <main class="bg-gray-900 text-white">
-    <!-- Hero Section -->
-    <section
-      id="hero-section"
-      class="flex flex-col md:flex-row items-center justify-between py-12 px-6 transition-all duration-700"
-      :class="{ 'opacity-0 translate-y-8': !isHeroVisible, 'opacity-100 translate-y-0': isHeroVisible }"
-    >
-      <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-fade-in-down">
-          OmniMetrics
-        </h1>
-        <h2 class="text-2xl md:text-3xl font-extrabold mb-6 text-blue-400 animate-fade-in-down">
-          #PlatformYourGame
-        </h2>
-        <p class="text-lg text-gray-300 mb-8 animate-fade-in-up">
-          Transform your football footage into tactical, actionable insights - via upload or seamless integration.
-        </p>
-        <button
-          class="bg-gradient-to-r from-secondary to-accent px-8 py-3 rounded-full font-bold uppercase hover:scale-105 transition-transform duration-300 animate-fade-in-up"
-          @click="$emit('open-modal')"
-        >
-          Request a Demo
-        </button>
-      </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center animate-fade-in-right">
-        <img src="/src/assets/img/home-main.png" alt="OmniMetrics Dashboard" class="w-4/5" />
-      </div>
-    </section>
+  <div>
+    <!-- Hero -->
+    <section class="pt-16 sm:pt-20">
+      <div class="om-container">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-5">
+            <div class="om-pill w-fit">
+              <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+              Real-time AI for Football
+            </div>
 
-    <!-- Smarter Data Section -->
-    <section
-      id="data-section"
-      class="py-12 px-6 bg-gray-800 transition-all duration-700"
-      :class="{ 'opacity-0 translate-y-8': !isDataVisible, 'opacity-100 translate-y-0': isDataVisible }"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4 text-blue-400 animate-fade-in-down">
-          Smarter Data, Better Football
-        </h2>
-        <p class="text-gray-300 mb-8 animate-fade-in-up">
-          Every club deserves real-time, accessible insights - no more siloed or outdated reports.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="animate-fade-in-left">
-            <h3 class="font-bold text-xl mb-2">Accessible Metrics</h3>
-            <p class="text-gray-300 text-sm">
-              From heat maps to off-ball patterns, every moment quantified.
+            <h1 class="mt-5 om-h1">
+              A Real-time AI assistant for
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent">in-game</span>
+              decisions.
+            </h1>
+
+            <p class="mt-5 om-p text-lg">
+              OmniMetrics turns live match video into low-latency, actionable insights. 
+              Designed for touchline decision support and live production workflows.
             </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button class="om-btn-primary" @click="emit('open-contact')">Request demo</button>
+              <RouterLink to="/solutions" class="om-btn-secondary">Explore solutions</RouterLink>
+            </div>
+
+            <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div class="om-card p-4">
+                <div class="text-sm font-semibold">Real-time</div>
+                <div class="mt-1 text-sm text-om-muted">Low-latency signals</div>
+              </div>
+              <div class="om-card p-4">
+                <div class="text-sm font-semibold">Broadcast-ready</div>
+                <div class="mt-1 text-sm text-om-muted">Overlays, clips, feeds</div>
+              </div>
+              <div class="om-card p-4 col-span-2 sm:col-span-1">
+                <div class="text-sm font-semibold">Bench-ready</div>
+                <div class="mt-1 text-sm text-om-muted">In-game coaching cues</div>
+              </div>
+            </div>
           </div>
-          <div class="animate-fade-in-up">
-            <h3 class="font-bold text-xl mb-2">AI & Computer Vision</h3>
-            <p class="text-gray-300 text-sm">
-              Automated player, ball & tactical data-straight from your footage.
-            </p>
-          </div>
-          <div class="animate-fade-in-right">
-            <h3 class="font-bold text-xl mb-2">Flexible Integration</h3>
-            <p class="text-gray-300 text-sm">
-              Upload video or hook into your existing camera & broadcast feeds.
-            </p>
+
+          <div class="lg:col-span-6">
+            <!-- <PlaceholderFigure
+              title="Hero visual / product montage"
+              hint="Replace with a short dashboard video or a clean screenshot montage from your pitch."
+              aspect="video"
+            /> -->
+            <img
+                :src="homeHero"
+                alt="Hero screenshot"
+                class="rounded-lg border-om-surface2 shadow-lg"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AI‑Driven Platform Section -->
-    <section
-      id="platform-section"
-      class="py-12 px-6 transition-all duration-700"
-      :class="{ 'opacity-0 translate-y-8': !isPlatformVisible, 'opacity-100 translate-y-0': isPlatformVisible }"
-    >
-      <div class="max-w-5xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8">
-        <div class="md:w-1/2 animate-fade-in-left">
-          <img
-            src="/src/assets/img/home-player-track.png"
-            alt="Player Tracking Demo"
-            class="rounded-lg shadow-lg"
-          />
+    <!-- Two products -->
+    <section class="mt-16 sm:mt-24">
+      <div class="om-container">
+        <div class="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <h2 class="om-h2">Our product offerings</h2>
+            <p class="mt-3 om-p max-w-2xl">
+              Purpose-built assistants for different live workflows: 
+              <br>coaching decision support and broadcast production.
+            </p>
+          </div>
+          <RouterLink to="/platform" class="om-btn-secondary">How it works</RouterLink>
         </div>
-        <div class="md:w-1/2 text-center md:text-left">
-          <h2 class="text-3xl font-bold mb-4 text-blue-400 animate-fade-in-down">
-            AI-Driven Platform
-          </h2>
-          <p class="text-gray-300 mb-4 animate-fade-in-up">
-            Our AI models detect and track every player, reconstruct ball trajectories - even when occluded - and map footage into field-coordinates automatically.
-          </p>
-          <p class="text-gray-300 mb-4 animate-fade-in-up">
-            Generate heat maps, sprint analyses, and tactical reports instantly - no manual tagging.
-          </p>
-          <p class="text-gray-300 mb-6 animate-fade-in-up">
-            Plug into your cameras or simply upload your clips - OmniMetrics adapts to your workflow.
-          </p>
-        </div>
-      </div>
 
-      <!-- Feature Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in-left">
-          <h3 class="font-bold text-xl mb-2 text-purple-500">Custom Insights</h3>
-          <p class="text-gray-300 text-sm">
-            Tailored metrics that align with your club's tactical philosophy.
-          </p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in-up">
-          <h3 class="font-bold text-xl mb-2 text-blue-500">Cost-Effective</h3>
-          <p class="text-gray-300 text-sm">
-            Flexible plans for clubs of all levels - no hidden fees or licensing surprises.
-          </p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in-right">
-          <h3 class="font-bold text-xl mb-2 text-green-500">User-Friendly</h3>
-          <p class="text-gray-300 text-sm">
-            Designed for coaches and analysts - zero technical setup needed on your end.
-          </p>
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <RouterLink to="/solutions/coach" class="om-card p-7 hover:bg-om-surface2 transition">
+            <div class="om-pill w-fit">AI Coach Assistant</div>
+            <h3 class="mt-4 om-h3">Decision support for clubs</h3>
+            <p class="mt-3 om-p">
+              Live tactical signals and context, built to support touchline decisions and staff communication.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-om-muted">
+              <li>• Live phase / momentum context</li>
+              <li>• Bench-ready player & team signals</li>
+              <li>• Instant clips for staff + players</li>
+            </ul>
+            <div class="mt-6 text-sm font-semibold text-om-cyan">Learn more →</div>
+          </RouterLink>
+
+          <RouterLink to="/solutions/broadcast" class="om-card p-7 hover:bg-om-surface2 transition">
+            <div class="om-pill w-fit">AI Broadcast Assistant</div>
+            <h3 class="mt-4 om-h3">Production intelligence for media</h3>
+            <p class="mt-3 om-p">
+              Power overlays, social-first outputs, and editorial decision support with a clean data feed built for live
+              operations.
+            </p>
+            <ul class="mt-5 space-y-2 text-sm text-om-muted">
+              <li>• Real-time broadcast overlays</li>
+              <li>• Auto-generated clips + captions</li>
+              <li>• Commentary and editorial assistance</li>
+            </ul>
+            <div class="mt-6 text-sm font-semibold text-om-cyan">Learn more →</div>
+          </RouterLink>
         </div>
       </div>
     </section>
 
-    <!-- AI Workflow Section -->
-    <section
-      id="workflow-section"
-      class="py-12 px-6 bg-gray-800 transition-all duration-700"
-      :class="{ 'opacity-0 translate-y-8': !isWorkflowVisible, 'opacity-100 translate-y-0': isWorkflowVisible }"
-    >
-      <div class="max-w-4xl mx-auto text-center mb-6">
-        <h2 class="text-3xl font-bold mb-2 text-blue-400 animate-fade-in-down">
-          How It Works
-        </h2>
-        <p class="text-gray-300 italic mb-8 animate-fade-in-up">
-          A seamless process to transform your footage into tactical, actionable insights.
+    <!-- Real-time stack -->
+    <section class="mt-16 sm:mt-24">
+      <div class="om-container">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-5">
+            <h2 class="om-h2">Built for live constraints</h2>
+            <p class="mt-3 om-p">
+              A low-latency computer vision + AI stack that converts standard camera feeds into real-time signals and
+              production-ready outputs.
+            </p>
+
+            <div class="mt-7 space-y-3">
+              <div class="om-card p-5">
+                <div class="font-semibold">Perception</div>
+                <div class="mt-1 text-sm text-om-muted">Player/ball detection, tracking, and identity signals</div>
+              </div>
+              <div class="om-card p-5">
+                <div class="font-semibold">Geometry</div>
+                <div class="mt-1 text-sm text-om-muted">Homography mapping to pitch coordinates</div>
+              </div>
+              <div class="om-card p-5">
+                <div class="font-semibold">Understanding</div>
+                <div class="mt-1 text-sm text-om-muted">Events, phases, and tactical context</div>
+              </div>
+              <div class="om-card p-5">
+                <div class="font-semibold">Delivery</div>
+                <div class="mt-1 text-sm text-om-muted">Dashboards, overlays, clips, and APIs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <!-- <PlaceholderFigure
+              title="Pipeline diagram / workflow visual"
+              hint="Replace with a clean diagram from the pitch: ingest → tracking → pitch mapping → events → outputs."
+              aspect="wide"
+            /> -->
+            <img
+                :src="pipelineDiagram"
+                alt="Pipeline diagram"
+                class="rounded-lg border-2 border-om-surface2 shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outputs -->
+    <section class="mt-16 sm:mt-24 pb-20">
+      <div class="om-container">
+        <h2 class="om-h2">Outputs that fit real operations</h2>
+        <p class="mt-3 om-p max-w-2xl">
+          Whether you ship to coaches, broadcasters, or data partners, 
+          the outputs are designed to plug into existing workflows.
         </p>
-      </div>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-        <!-- Step 1 -->
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg text-center animate-fade-in-left md:w-1/4">
-          <div class="text-4xl font-bold mb-2 text-purple-500">1</div>
-          <h3 class="font-bold mb-2">Capture</h3>
-          <p class="text-gray-300 text-sm">
-            Use your cameras, broadcast feed or simply upload video.
-          </p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div class="om-card p-6">
+            <div class="font-semibold">Live dashboard</div>
+            <p class="mt-2 text-sm text-om-muted">Real-time metrics, timelines, and tactical views.</p>
+          </div>
+          <div class="om-card p-6">
+            <div class="font-semibold">Broadcast overlays</div>
+            <p class="mt-2 text-sm text-om-muted">On-screen graphics ready for live production.</p>
+          </div>
+          <div class="om-card p-6">
+            <div class="font-semibold">Social content</div>
+            <p class="mt-2 text-sm text-om-muted">Clips and highlights designed for fast turnaround.</p>
+          </div>
+          <div class="om-card p-6">
+            <div class="font-semibold">Data feed / API</div>
+            <p class="mt-2 text-sm text-om-muted">Integrate with stats aggregators, leagues, and betting partners.</p>
+          </div>
         </div>
 
-        <!-- Arrow -->
-        <div class="hidden md:flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg text-center animate-fade-in-up md:w-1/4">
-          <div class="text-4xl font-bold mb-2 text-green-500">2</div>
-          <h3 class="font-bold mb-2">Analyze</h3>
-          <p class="text-gray-300 text-sm">
-            Our AI extracts player, ball & tactical data instantly.
-          </p>
-        </div>
-
-        <!-- Arrow -->
-        <div class="hidden md:flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg text-center animate-fade-in-up md:w-1/4">
-          <div class="text-4xl font-bold mb-2 text-blue-500">3</div>
-          <h3 class="font-bold mb-2">Insights</h3>
-          <p class="text-gray-300 text-sm">
-            Dashboards, heat maps & key event breakdowns.
-          </p>
-        </div>
-
-        <!-- Arrow -->
-        <div class="hidden md:flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="bg-gray-900 p-6 rounded-2xl shadow-lg text-center animate-fade-in-right md:w-1/4">
-          <div class="text-4xl font-bold mb-2 text-yellow-500">4</div>
-          <h3 class="font-bold mb-2">Act</h3>
-          <p class="text-gray-300 text-sm">
-            Make data-driven decisions on and off the pitch.
-          </p>
+        <div class="mt-12 om-card p-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div class="font-display text-xl tracking-tight">Want a pilot for your competition?</div>
+            <div class="mt-2 text-sm text-om-muted">We run fast pilots with clear deliverables and integration paths.</div>
+          </div>
+          <button class="om-btn-primary" @click="emit('open-contact')">Talk to us</button>
         </div>
       </div>
     </section>
-  </main>
+  </div>
 </template>
-
-<style>
-@keyframes fadeInDown { from { opacity:0; transform:translateY(-20px) } to { opacity:1; transform:translateY(0) } }
-@keyframes fadeInUp   { from { opacity:0; transform:translateY(20px) }  to { opacity:1; transform:translateY(0) } }
-@keyframes fadeInLeft { from { opacity:0; transform:translateX(-20px) } to { opacity:1; transform:translateX(0) } }
-@keyframes fadeInRight{ from { opacity:0; transform:translateX(20px) }  to { opacity:1; transform:translateX(0) } }
-
-.animate-fade-in-down { animation: fadeInDown .6s ease-out; }
-.animate-fade-in-up   { animation: fadeInUp   .6s ease-out; }
-.animate-fade-in-left { animation: fadeInLeft .6s ease-out; }
-.animate-fade-in-right{ animation: fadeInRight .6s ease-out; }
-</style>
