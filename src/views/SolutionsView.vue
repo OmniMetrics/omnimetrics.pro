@@ -2,6 +2,9 @@
 import coachAssistant from '@/assets/img/coach-assistant.png'
 import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
 
+import broadcastBg from '@/assets/img/broadcast-bg.jpg'
+import coachBg from '@/assets/img/coach-bg.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -15,7 +18,7 @@ const emit = defineEmits<{
         Solutions
       </div>
 
-  <h1 class="mt-5 om-h1">Built For Clubs And Broadcasters</h1>
+      <h1 class="mt-5 om-h1">Built For Clubs And Broadcasters</h1>
       <p class="mt-5 om-p text-lg max-w-3xl">
         OmniMetrics builds real-time AI assistants for football, enabling
         in-game decision support, live production intelligence, and fast content
@@ -32,66 +35,120 @@ const emit = defineEmits<{
       </div>
 
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
-        <div class="om-card p-8">
-          <div class="flex items-start justify-between gap-6">
-            <div>
-              <div class="om-pill w-fit">AI Coach Assistant</div>
-              <h2 class="mt-4 om-h2">Real-Time Decision Support For Clubs</h2>
-              <p class="mt-3 om-p">
-                Live signals and context designed for touchline decisions, staff
-                communication, and quick in-game clips.
-              </p>
-              <ul class="mt-5 space-y-2 text-sm text-om-muted">
-                <li>• Team shape and phase context (live)</li>
-                <li>• Possession chains and pressing signals</li>
-                <li>• Bench-to-staff delivery (tablet / dashboard)</li>
-              </ul>
-              <div class="mt-6 flex gap-3">
-                <RouterLink class="om-btn-secondary" to="/solutions/coach"
-                  >Details</RouterLink
-                >
-                <button class="om-btn-primary" @click="emit('open-contact')">
-                  Pilot for your club
-                </button>
-              </div>
+        <!-- AI Coach Assistant -->
+        <div
+          class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-8"
+        >
+          <!-- Background Image -->
+          <img
+            :src="coachBg"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover opacity-15"
+          />
+
+          <!-- Overlay -->
+          <!-- <div
+            class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
+          ></div> -->
+
+          <!-- Content -->
+          <div class="relative z-10">
+            <div class="om-pill w-fit text-white">AI Coach Assistant</div>
+
+            <h2 class="mt-4 om-h2 text-white">Real-Time Decision Support For Clubs</h2>
+
+            <p class="mt-3 om-p text-white">
+              Live signals and context designed for touchline decisions, staff
+              communication, and quick in-game clips.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-white">
+              <li>• Team shape and phase context (live)</li>
+              <li>• Possession chains and pressing signals</li>
+              <li>• Bench-to-staff delivery (tablet / dashboard)</li>
+            </ul>
+
+            <div class="mt-6 flex gap-3">
+              <RouterLink class="om-btn-secondary" to="/solutions/coach">
+                Details
+              </RouterLink>
+              <button class="om-btn-primary" @click="emit('open-contact')">
+                Pilot for your club
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="om-card p-8">
-          <div class="om-pill w-fit">AI Broadcast Assistant</div>
-          <h2 class="mt-4 om-h2">Production Intelligence For Media</h2>
-          <p class="mt-3 om-p">
-            Support live production with real-time overlays, social-first
-            outputs, and an integration-friendly data feed.
-          </p>
-          <ul class="mt-5 space-y-2 text-sm text-om-muted">
-            <li>• Broadcast overlays and graphics triggers</li>
-            <li>• Social clip automation and highlight workflows</li>
-            <li>• Commentary and editorial assistance</li>
-          </ul>
-          <div class="mt-6 flex gap-3">
-            <RouterLink class="om-btn-secondary" to="/solutions/broadcast"
-              >Details</RouterLink
-            >
-            <button class="om-btn-primary" @click="emit('open-contact')">
-              Pilot for your league
-            </button>
+        <!-- AI Broadcast Assistant -->
+        <div
+          class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-8"
+        >
+          <!-- Background Image -->
+          <img
+            :src="broadcastBg"
+            alt="Broadcast Background"
+            class="absolute inset-0 h-full w-full object-cover opacity-20"
+          />
+
+          <!-- Overlay -->
+          <!-- <div
+            class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
+          ></div> -->
+
+          <!-- Content -->
+          <div class="relative z-10">
+            <div class="om-pill w-fit text-white">AI Broadcast Assistant</div>
+
+            <h2 class="mt-4 om-h2 text-white">Production Intelligence For Media</h2>
+
+            <p class="mt-3 om-p text-white">
+              Support live production with real-time overlays, social-first
+              outputs, and an integration-friendly data feed.
+            </p>
+
+            <ul class="mt-5 space-y-2 text-sm text-white">
+              <li>• Broadcast overlays and graphics triggers</li>
+              <li>• Social clip automation and highlight workflows</li>
+              <li>• Commentary and editorial assistance</li>
+            </ul>
+
+            <div class="mt-6 flex gap-3">
+              <RouterLink class="om-btn-secondary" to="/solutions/broadcast">
+                Details
+              </RouterLink>
+              <button class="om-btn-primary" @click="emit('open-contact')">
+                Pilot for your league
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
-        <img
-          :src="coachAssistant"
-          alt="Coach Assistant"
-          class="rounded-lg object-cover border-om-surface2 shadow-lg"
-        />
-        <img
-          :src="broadcastAssistant"
-          alt="Broadcast Assistant"
-          class="rounded-lg object-cover border-om-surface2 shadow-lg"
-        />
+        <div class="relative">
+          <div
+            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100"
+          >
+            AI Coach Assistant
+          </div>
+          <img
+            :src="coachAssistant"
+            alt="Coach Assistant"
+            class="rounded-lg object-cover border-om-surface2 shadow-lg"
+          />
+        </div>
+        <div class="relative">
+          <div
+            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100"
+          >
+            AI Broadcast Assistant
+          </div>
+          <img
+            :src="broadcastAssistant"
+            alt="Broadcast Assistant"
+            class="rounded-lg object-cover border-om-surface2 shadow-lg"
+          />
+        </div>
       </div>
 
       <div class="mt-16 pb-16">
