@@ -4,6 +4,11 @@ import PlaceholderFigure from '@/components/PlaceholderFigure.vue'
 import homeHero from '@/assets/img/home-hero.png'
 import pipelineDiagram from '@/assets/img/home-pipeline.png'
 
+import dashboardIcon from '@/assets/img/dashboard.png'
+import televisionIcon from '@/assets/img/television.png'
+import videoIcon from '@/assets/img/video.png'
+import storageIcon from '@/assets/img/storage.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -28,8 +33,8 @@ const emit = defineEmits<{
             </h1>
 
             <p class="mt-5 om-p text-lg">
-              OmniMetrics turns live match video into low-latency, actionable insights. 
-              Designed for touchline decision support and live production workflows.
+              OmniMetrics turns live match video into low-latency, cost-effective, actionable insights. 
+              Designed for quick touchline decision support and live production workflows.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -53,7 +58,7 @@ const emit = defineEmits<{
             </div>
           </div>
 
-          <div class="lg:col-span-6">
+          <div class="lg:col-span-7">
             <!-- <PlaceholderFigure
               title="Hero visual / product montage"
               hint="Replace with a short dashboard video or a clean screenshot montage from your pitch."
@@ -120,7 +125,7 @@ const emit = defineEmits<{
     <section class="mt-16 sm:mt-24">
       <div class="om-container">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-          <div class="lg:col-span-5">
+          <div class="lg:col-span-6">
             <h2 class="om-h2">Built for live constraints</h2>
             <p class="mt-3 om-p">
               A low-latency computer vision + AI stack that converts standard camera feeds into real-time signals and
@@ -129,25 +134,77 @@ const emit = defineEmits<{
 
             <div class="mt-7 space-y-3">
               <div class="om-card p-5">
-                <div class="font-semibold">Perception</div>
-                <div class="mt-1 text-sm text-om-muted">Player/ball detection, tracking, and identity signals</div>
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-semibold">Perception</div>
+                    <div class="mt-1 text-sm text-om-muted">
+                      Real-time player and ball detection from standard broadcast feeds, maintaining stable tracking and identity signals.
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="om-pill">Tracking</span>
+                      <span class="om-pill">Identity</span>
+                      <span class="om-pill">Low latency</span>
+                    </div>
+                  </div>
+                  <span class="om-pill shrink-0">Live</span>
+                </div>
               </div>
+
               <div class="om-card p-5">
-                <div class="font-semibold">Geometry</div>
-                <div class="mt-1 text-sm text-om-muted">Homography mapping to pitch coordinates</div>
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-semibold">Geometry</div>
+                    <div class="mt-1 text-sm text-om-muted">
+                      Mapping detections to pitch coordinates to measure spacing, zones, and team structure consistently.
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="om-pill">Pitch mapping</span>
+                      <span class="om-pill">Coordinates</span>
+                    </div>
+                  </div>
+                  <span class="om-pill shrink-0">Meters</span>
+                </div>
               </div>
+
               <div class="om-card p-5">
-                <div class="font-semibold">Understanding</div>
-                <div class="mt-1 text-sm text-om-muted">Events, phases, and tactical context</div>
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-semibold">Understanding</div>
+                    <div class="mt-1 text-sm text-om-muted">
+                      Converting movement into live tactical signals: phases, pressure, shape breaks, and key in-game events.
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="om-pill">Phases</span>
+                      <span class="om-pill">Events</span>
+                      <span class="om-pill">Tactical context</span>
+                    </div>
+                  </div>
+                  <span class="om-pill shrink-0">Signals</span>
+                </div>
               </div>
+
               <div class="om-card p-5">
-                <div class="font-semibold">Delivery</div>
-                <div class="mt-1 text-sm text-om-muted">Dashboards, overlays, clips, and APIs</div>
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <div class="font-semibold">Delivery</div>
+                    <div class="mt-1 text-sm text-om-muted">
+                      Delivering live outputs to coaches and media: dashboards, overlays, instant social media content, and partner APIs.
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="om-pill">Dashboards</span>
+                      <span class="om-pill">Broadcast Overlays</span>
+                      <span class="om-pill">Social media</span>
+                      <span class="om-pill">APIs</span>
+                    </div>
+                  </div>
+                  <span class="om-pill shrink-0">Outputs</span>
+                </div>
               </div>
             </div>
+
           </div>
 
-          <div class="lg:col-span-7">
+          <div class="lg:col-span-6">
             <!-- <PlaceholderFigure
               title="Pipeline diagram / workflow visual"
               hint="Replace with a clean diagram from the pitch: ingest → tracking → pitch mapping → events → outputs."
@@ -176,18 +233,38 @@ const emit = defineEmits<{
           <div class="om-card p-6">
             <div class="font-semibold">Live dashboard</div>
             <p class="mt-2 text-sm text-om-muted">Real-time metrics, timelines, and tactical views.</p>
+            <img
+                :src="dashboardIcon"
+                alt="Dashboard icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Broadcast overlays</div>
             <p class="mt-2 text-sm text-om-muted">On-screen graphics ready for live production.</p>
+            <img
+                :src="televisionIcon"
+                alt="Television icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Social content</div>
             <p class="mt-2 text-sm text-om-muted">Clips and highlights designed for fast turnaround.</p>
+            <img
+                :src="videoIcon"
+                alt="Video icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Data feed / API</div>
             <p class="mt-2 text-sm text-om-muted">Integrate with stats aggregators, leagues, and betting partners.</p>
+            <img
+                :src="storageIcon"
+                alt="Storage icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+            />
           </div>
         </div>
 
