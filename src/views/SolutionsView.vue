@@ -17,13 +17,18 @@ const emit = defineEmits<{
 
       <h1 class="mt-5 om-h1">Built for clubs and broadcasters</h1>
       <p class="mt-5 om-p text-lg max-w-3xl">
-        OmniMetrics builds real-time AI assistants for football, enabling in-game decision support, live production
-        intelligence, and fast content workflows.
+        OmniMetrics builds real-time AI assistants for football, enabling
+        in-game decision support, live production intelligence, and fast content
+        workflows.
       </p>
 
       <div class="mt-8 flex flex-wrap gap-3">
-        <button class="om-btn-primary" @click="emit('open-contact')">Request demo</button>
-        <RouterLink to="/#how-it-works" class="om-btn-secondary">How it works</RouterLink>
+        <button class="om-btn-primary" @click="emit('open-contact')">
+          Request demo
+        </button>
+        <RouterLink to="/#how-it-works" class="om-btn-secondary"
+          >How it works</RouterLink
+        >
       </div>
 
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
@@ -33,7 +38,8 @@ const emit = defineEmits<{
               <div class="om-pill w-fit">AI Coach Assistant</div>
               <h2 class="mt-4 om-h2">Real-time decision support for clubs</h2>
               <p class="mt-3 om-p">
-                Live signals and context designed for touchline decisions, staff communication, and quick in-game clips.
+                Live signals and context designed for touchline decisions, staff
+                communication, and quick in-game clips.
               </p>
               <ul class="mt-5 space-y-2 text-sm text-om-muted">
                 <li>• Team shape and phase context (live)</li>
@@ -41,8 +47,12 @@ const emit = defineEmits<{
                 <li>• Bench-to-staff delivery (tablet / dashboard)</li>
               </ul>
               <div class="mt-6 flex gap-3">
-                <RouterLink class="om-btn-secondary" to="/solutions/coach">Details</RouterLink>
-                <button class="om-btn-primary" @click="emit('open-contact')">Pilot for your club</button>
+                <RouterLink class="om-btn-secondary" to="/solutions/coach"
+                  >Details</RouterLink
+                >
+                <button class="om-btn-primary" @click="emit('open-contact')">
+                  Pilot for your club
+                </button>
               </div>
             </div>
           </div>
@@ -52,7 +62,8 @@ const emit = defineEmits<{
           <div class="om-pill w-fit">AI Broadcast Assistant</div>
           <h2 class="mt-4 om-h2">Production intelligence for media</h2>
           <p class="mt-3 om-p">
-            Support live production with real-time overlays, social-first outputs, and an integration-friendly data feed.
+            Support live production with real-time overlays, social-first
+            outputs, and an integration-friendly data feed.
           </p>
           <ul class="mt-5 space-y-2 text-sm text-om-muted">
             <li>• Broadcast overlays and graphics triggers</li>
@@ -60,29 +71,52 @@ const emit = defineEmits<{
             <li>• Commentary and editorial assistance</li>
           </ul>
           <div class="mt-6 flex gap-3">
-            <RouterLink class="om-btn-secondary" to="/solutions/broadcast">Details</RouterLink>
-            <button class="om-btn-primary" @click="emit('open-contact')">Pilot for your league</button>
+            <RouterLink class="om-btn-secondary" to="/solutions/broadcast"
+              >Details</RouterLink
+            >
+            <button class="om-btn-primary" @click="emit('open-contact')">
+              Pilot for your league
+            </button>
           </div>
         </div>
       </div>
 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
-        <img :src="coachAssistant" alt="Coach Assistant" class="rounded-lg object-cover border-om-surface2 shadow-lg" />
-        <img :src="broadcastAssistant" alt="Broadcast Assistant" class="rounded-lg object-cover border-om-surface2 shadow-lg" />
+        <img
+          :src="coachAssistant"
+          alt="Coach Assistant"
+          class="rounded-lg object-cover border-om-surface2 shadow-lg"
+        />
+        <img
+          :src="broadcastAssistant"
+          alt="Broadcast Assistant"
+          class="rounded-lg object-cover border-om-surface2 shadow-lg"
+        />
       </div>
 
       <div class="mt-16 pb-16">
-        <div class="om-card p-8">
+        <div
+          class="rounded-2xl bg-gradient-to-r from-secondary to-accent p-8 shadow-glow text-om-bg"
+        >
           <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div class="lg:col-span-8">
-              <div class="font-display text-xl tracking-tight">Who we work with</div>
-              <p class="mt-3 om-p max-w-3xl">
-                TV channels, leagues, broadcasters, clubs, stats aggregators, and betting/data partners - anyone who
-                needs reliable and real-time football intelligence from video.
+              <div class="font-display text-xl tracking-tight">
+                Who we work with
+              </div>
+              <p class="mt-3 text-sm text-om-bg/80 max-w-3xl">
+                TV channels, leagues, broadcasters, clubs, stats aggregators,
+                and betting/data partners — anyone who needs reliable, real-time
+                football intelligence from video.
               </p>
             </div>
+
             <div class="lg:col-span-4 flex lg:justify-end">
-              <button class="om-btn-primary w-full lg:w-auto" @click="emit('open-contact')">Get in touch</button>
+              <button
+                class="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold bg-om-bg text-white hover:bg-om-surface2 transition w-full lg:w-auto"
+                @click="emit('open-contact')"
+              >
+                Get in touch
+              </button>
             </div>
           </div>
         </div>
