@@ -16,6 +16,9 @@ import rnca from '@/assets/img/rnca.png'
 import uncw from '@/assets/img/uncw.png'
 import altoTamega from '@/assets/img/alto-tamega.png'
 
+import broadcastBg from '@/assets/img/broadcast-bg.jpg'
+import coachBg from '@/assets/img/coach-bg.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -109,43 +112,83 @@ const emit = defineEmits<{
         </div>
 
         <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <!-- AI Coach Assistant -->
           <RouterLink
             to="/solutions/coach"
-            class="om-card p-7 hover:bg-om-surface2 transition"
+            class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-7 transition hover:shadow-glow"
           >
-            <div class="om-pill w-fit">AI Coach Assistant</div>
-            <h3 class="mt-4 om-h3">Decision support for clubs</h3>
-            <p class="mt-3 om-p">
-              Live tactical signals and context, built to support touchline
-              decisions and staff communication.
-            </p>
-            <ul class="mt-5 space-y-2 text-sm text-om-muted">
-              <li>• Live phase / momentum context</li>
-              <li>• Bench-ready player & team signals</li>
-              <li>• Instant clips for staff + players</li>
-            </ul>
-            <div class="mt-6 text-sm font-semibold text-om-cyan">
-              Learn more →
+            <!-- Background Image -->
+            <img
+              :src="coachBg"
+              alt="Coach Background"
+              class="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+
+            <!-- Overlay -->
+            <!-- <div
+              class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
+            ></div> -->
+
+            <!-- Content -->
+            <div class="relative z-10">
+              <div class="om-pill w-fit text-white">AI Coach Assistant</div>
+
+              <h3 class="mt-4 om-h3 text-white">Decision support for clubs</h3>
+
+              <p class="mt-3 om-p text-white">
+                Live tactical signals and context, built to support touchline
+                decisions and staff communication.
+              </p>
+
+              <ul class="mt-5 space-y-2 text-sm text-white">
+                <li>• Live phase / momentum context</li>
+                <li>• Bench-ready player & team signals</li>
+                <li>• Instant clips for staff + players</li>
+              </ul>
+
+              <div class="mt-6 text-sm font-semibold text-om-cyan">
+                Learn more →
+              </div>
             </div>
           </RouterLink>
 
+          <!-- AI Broadcast Assistant -->
           <RouterLink
             to="/solutions/broadcast"
-            class="om-card p-7 hover:bg-om-surface2 transition"
+            class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-7 transition hover:shadow-glow"
           >
-            <div class="om-pill w-fit">AI Broadcast Assistant</div>
-            <h3 class="mt-4 om-h3">Production intelligence for media</h3>
-            <p class="mt-3 om-p">
-              Power overlays, social-first outputs, and editorial decision
-              support with a clean data feed built for live operations.
-            </p>
-            <ul class="mt-5 space-y-2 text-sm text-om-muted">
-              <li>• Real-time broadcast overlays</li>
-              <li>• Auto-generated clips + captions</li>
-              <li>• Commentary and editorial assistance</li>
-            </ul>
-            <div class="mt-6 text-sm font-semibold text-om-cyan">
-              Learn more →
+            <!-- Background Image -->
+            <img
+              :src="broadcastBg"
+              alt="Broadcast Background"
+              class="absolute inset-0 h-full w-full object-cover opacity-30"
+            />
+
+            <!-- Overlay -->
+            <!-- <div
+              class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
+            ></div> -->
+
+            <!-- Content -->
+            <div class="relative z-10">
+              <div class="om-pill w-fit text-white">AI Broadcast Assistant</div>
+
+              <h3 class="mt-4 om-h3 text-white">Production intelligence for media</h3>
+
+              <p class="mt-3 om-p text-white">
+                Power overlays, social-first outputs, and editorial decision
+                support with a clean data feed built for live operations.
+              </p>
+
+              <ul class="mt-5 space-y-2 text-sm text-white">
+                <li>• Real-time broadcast overlays</li>
+                <li>• Auto-generated clips + captions</li>
+                <li>• Commentary and editorial assistance</li>
+              </ul>
+
+              <div class="mt-6 text-sm font-semibold text-om-cyan">
+                Learn more →
+              </div>
             </div>
           </RouterLink>
         </div>
@@ -258,7 +301,7 @@ const emit = defineEmits<{
     <!-- Outputs -->
     <section class="mt-16 sm:mt-24 pb-20">
       <div class="om-container">
-  <h2 class="om-h2">Outputs That Fit Real Operations</h2>
+        <h2 class="om-h2">Outputs That Fit Real Operations</h2>
         <p class="mt-3 om-p max-w-2xl">
           Whether you ship to coaches, broadcasters, or data partners, the
           outputs are designed to plug into existing workflows.
