@@ -22,7 +22,6 @@ npm run preview
 - `/solutions` — Solutions overview
 - `/solutions/coach` — AI Coach Assistant
 - `/solutions/broadcast` — AI Broadcast Assistant
-- `/platform` — OmniMetrics Engine (platform)
 - `/company` — Company
 
 ## Domain

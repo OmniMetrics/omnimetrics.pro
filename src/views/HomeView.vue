@@ -9,6 +9,14 @@ import televisionIcon from '@/assets/img/television.png'
 import videoIcon from '@/assets/img/video.png'
 import storageIcon from '@/assets/img/storage.png'
 
+import iapmei from '@/assets/img/iapmei.png'
+import portugal2030 from '@/assets/img/portugal-2030.png'
+import fct from '@/assets/img/fct.png'
+import rnca from '@/assets/img/rnca.png'
+import uncw from '@/assets/img/uncw.png'
+import altoTamega from '@/assets/img/alto-tamega.png'
+
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -85,7 +93,6 @@ const emit = defineEmits<{
               <br>coaching decision support and broadcast production.
             </p>
           </div>
-          <RouterLink to="/platform" class="om-btn-secondary">How it works</RouterLink>
         </div>
 
         <div class="mt-10 grid gap-6 lg:grid-cols-2">
@@ -122,7 +129,7 @@ const emit = defineEmits<{
     </section>
 
     <!-- Real-time stack -->
-    <section class="mt-16 sm:mt-24">
+    <section class="mt-16 sm:mt-24" id="how-it-works">
       <div class="om-container">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div class="lg:col-span-6">
@@ -267,6 +274,70 @@ const emit = defineEmits<{
             />
           </div>
         </div>
+
+        <section class="mt-16">
+        <h2 class="om-h2">Data as an asset</h2>
+        <p class="mt-3 om-p max-w-3xl">
+          Real-time football data becomes a scalable asset when it can be packaged into reliable products for media,
+          competitions, stats aggregation, and betting ecosystems.
+        </p>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-2">
+          <div class="om-card p-7">
+            <div class="font-semibold">Rights-aware packaging</div>
+            <p class="mt-2 text-sm text-om-muted">
+              Clear data products, delivery boundaries, and customer-facing value - aligned with the competition context.
+            </p>
+          </div>
+          <div class="om-card p-7">
+            <div class="font-semibold">Scalable operations</div>
+            <p class="mt-2 text-sm text-om-muted">
+              Designed to scale across matches, competitions, and delivery channels.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative mt-16 border-t border-om-border/70">
+        <div class="om-container py-10">
+          <div class="flex items-end justify-between gap-6">
+            <div>
+              <div class="om-pill">Supported by</div>
+              <h2 class="mt-3 font-display text-2xl sm:text-3xl tracking-tight">Ecosystem &amp; Institutional Partners</h2>
+              <p class="mt-2 max-w-2xl text-sm text-om-muted">
+                Organisations supporting R&amp;D, innovation, and deployment efforts behind OmniMetrics.
+              </p>
+            </div>
+          </div>
+
+<div class="mt-8 om-card p-6 sm:p-7">
+  <div class="flex flex-wrap justify-center gap-10 max-w-5xl mx-auto">
+    
+    <img :src="iapmei" alt="IAPMEI"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <img :src="fct" alt="FCT"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <img :src="rnca" alt="RNCA"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <img :src="uncw" alt="UNCW"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <img :src="altoTamega" alt="Alto Tâmega"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <img :src="portugal2030" alt="Portugal 2030"
+      class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition" />
+
+    <!-- 7th logo if needed -->
+
+  </div>
+</div>
+
+        </div>
+      </section>
 
         <div class="mt-12 om-card p-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>

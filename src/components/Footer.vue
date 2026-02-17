@@ -36,17 +36,12 @@ const year = new Date().getFullYear()
           </div>
 
           <div>
-            <div class="text-sm font-semibold text-white">Platform</div>
-            <ul class="mt-4 space-y-2 text-sm">
-              <li><RouterLink to="/platform" class="om-link">Real-time AI</RouterLink></li>
-              <li><a class="om-link" href="https://github.com/OmniMetrics/" target="_blank" rel="noreferrer">GitHub</a></li>
-            </ul>
-          </div>
-
-          <div>
             <div class="text-sm font-semibold text-white">Company</div>
             <ul class="mt-4 space-y-2 text-sm">
               <li><RouterLink to="/company" class="om-link">About</RouterLink></li>
+              <li><a class="om-link" href="https://github.com/OmniMetrics/" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a class="om-link" href="https://pt.linkedin.com/company/omnimetricspro" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a class="om-link" href="https://www.instagram.com/omnimetrics.pro/" target="_blank" rel="noreferrer">Instagram</a></li>
             </ul>
           </div>
         </div>

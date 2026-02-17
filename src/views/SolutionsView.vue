@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import PlaceholderFigure from '@/components/PlaceholderFigure.vue'
+import coachAssistant from '@/assets/img/coach-assistant.png'
+import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
 
 const emit = defineEmits<{
   (e: 'open-contact'): void
@@ -22,7 +23,7 @@ const emit = defineEmits<{
 
       <div class="mt-8 flex flex-wrap gap-3">
         <button class="om-btn-primary" @click="emit('open-contact')">Request demo</button>
-        <RouterLink to="/platform" class="om-btn-secondary">How it works</RouterLink>
+        <RouterLink to="/#how-it-works" class="om-btn-secondary">How it works</RouterLink>
       </div>
 
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
@@ -66,16 +67,8 @@ const emit = defineEmits<{
       </div>
 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
-        <PlaceholderFigure
-          title="Coming Soon: Coach product screenshot"
-          hint="Coach dashboard / workflow screens from the pitch."
-          aspect="wide"
-        />
-        <PlaceholderFigure
-          title="Coming Soon: Broadcast overlay mock"
-          hint="Broadcast overlays / on-screen graphics examples from the pitch."
-          aspect="wide"
-        />
+        <img :src="coachAssistant" alt="Coach Assistant" class="rounded-lg object-cover border-om-surface2 shadow-lg" />
+        <img :src="broadcastAssistant" alt="Broadcast Assistant" class="rounded-lg object-cover border-om-surface2 shadow-lg" />
       </div>
 
       <div class="mt-16 pb-16">

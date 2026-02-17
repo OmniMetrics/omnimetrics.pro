@@ -1,4 +1,7 @@
 <script setup lang="ts">
+
+import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -20,7 +23,7 @@ const emit = defineEmits<{
 
           <div class="mt-8 flex flex-wrap gap-3">
             <button class="om-btn-primary" @click="emit('open-contact')">Request demo</button>
-            <RouterLink to="/platform" class="om-btn-secondary">How it works</RouterLink>
+            <RouterLink to="/#how-it-works" class="om-btn-secondary">How it works</RouterLink>
           </div>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-2">
@@ -41,14 +44,7 @@ const emit = defineEmits<{
 
         <div class="lg:col-span-6">
           <div class="om-card overflow-hidden">
-            <img
-              src="/placeholders/page_last_broadcast.png"
-              alt="PLACEHOLDER: Broadcast product visuals"
-              class="w-full object-cover"
-            />
-            <div class="border-t border-om-border/60 p-4 text-xs text-om-muted">
-              PLACEHOLDER — replace with broadcast overlay examples and the live dashboard montage from the pitch.
-            </div>
+             <img :src="broadcastAssistant" alt="Broadcast Assistant" class="rounded-lg object-cover border-om-surface2 shadow-lg" />
           </div>
         </div>
       </div>

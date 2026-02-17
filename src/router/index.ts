@@ -2,7 +2,16 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  scrollBehavior() {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    }
+
     return { top: 0 }
   },
   routes: [
@@ -20,7 +29,6 @@ const router = createRouter({
       component: () => import('@/views/SolutionBroadcastView.vue'),
     },
 
-    { path: '/platform', name: 'platform', component: () => import('@/views/PlatformView.vue') },
     { path: '/company', name: 'company', component: () => import('@/views/CompanyView.vue') },
 
     { path: '/:catchAll(.*)', name: 'not-found', component: () => import('@/views/NotFoundView.vue') },

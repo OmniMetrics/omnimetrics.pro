@@ -72,7 +72,6 @@ const navLinkClass = computed(() => (path: string) => {
             </div>
           </div>
 
-          <RouterLink :class="navLinkClass('/platform')" to="/platform">Platform</RouterLink>
           <RouterLink :class="navLinkClass('/company')" to="/company">Company</RouterLink>
 
           <button class="ml-2 om-btn-secondary" @click="emit('open-contact')">Contact</button>
@@ -126,9 +125,6 @@ const navLinkClass = computed(() => (path: string) => {
         </div>
 
         <div class="mt-4 grid gap-2">
-          <RouterLink to="/platform" class="om-card px-4 py-3 hover:bg-om-surface2 transition" @click="closeMobile">
-            <div class="font-semibold">Platform</div>
-          </RouterLink>
           <RouterLink to="/company" class="om-card px-4 py-3 hover:bg-om-surface2 transition" @click="closeMobile">
             <div class="font-semibold">Company</div>
           </RouterLink>
