@@ -30,19 +30,19 @@ const emit = defineEmits<{
     <section class="pt-16 sm:pt-20">
       <div class="om-container">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
-          <div class="lg:col-span-5">
+          <div class="lg:col-span-7">
             <div class="om-pill w-fit">
               <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
               Real-time AI for Football
             </div>
 
             <h1 class="mt-5 om-h1">
-              A Real-Time AI Assistant For
+              A Real-Time <br>AI Assistant For <br>
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent"
                 >In-Game</span
               >
-              Decisions.
+              Decisions
             </h1>
 
             <p class="mt-5 om-p text-lg">
@@ -53,28 +53,28 @@ const emit = defineEmits<{
 
             <div class="mt-8 flex flex-wrap gap-3">
               <button class="om-btn-primary" @click="emit('open-contact')">
-                Request demo
+                Request Demo
               </button>
               <RouterLink to="/solutions" class="om-btn-secondary"
-                >Explore solutions</RouterLink
+                >Explore Solutions</RouterLink
               >
             </div>
 
             <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
               <div class="om-card p-4">
-                <div class="text-sm font-semibold">Real-time</div>
+                <div class="text-sm font-semibold">Real-Time</div>
                 <div class="mt-1 text-sm text-om-muted">
                   Low-latency signals
                 </div>
               </div>
               <div class="om-card p-4">
-                <div class="text-sm font-semibold">Broadcast-ready</div>
+                <div class="text-sm font-semibold">Broadcast-Ready</div>
                 <div class="mt-1 text-sm text-om-muted">
                   Overlays, clips, feeds
                 </div>
               </div>
               <div class="om-card p-4 col-span-2 sm:col-span-1">
-                <div class="text-sm font-semibold">Bench-ready</div>
+                <div class="text-sm font-semibold">Bench-Ready</div>
                 <div class="mt-1 text-sm text-om-muted">
                   In-game coaching cues
                 </div>
@@ -82,7 +82,7 @@ const emit = defineEmits<{
             </div>
           </div>
 
-          <div class="lg:col-span-7">
+          <div class="lg:col-span-5">
             <!-- <PlaceholderFigure
               title="Hero visual / product montage"
               hint="Replace with a short dashboard video or a clean screenshot montage from your pitch."
@@ -121,7 +121,7 @@ const emit = defineEmits<{
             <img
               :src="coachBg"
               alt="Coach Background"
-              class="absolute inset-0 h-full w-full object-cover opacity-15"
+              class="absolute inset-0 h-full w-full object-cover opacity-10"
             />
 
             <!-- Overlay -->
@@ -309,7 +309,7 @@ const emit = defineEmits<{
 
         <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <div class="om-card p-6">
-            <div class="font-semibold">Live dashboard</div>
+            <div class="font-semibold">Live Dashboard</div>
             <p class="mt-2 text-sm text-om-muted">
               Real-time metrics, timelines, and tactical views.
             </p>
@@ -320,7 +320,7 @@ const emit = defineEmits<{
             />
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Broadcast overlays</div>
+            <div class="font-semibold">Broadcast Overlays</div>
             <p class="mt-2 text-sm text-om-muted">
               On-screen graphics ready for live production.
             </p>
@@ -331,7 +331,7 @@ const emit = defineEmits<{
             />
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Social content</div>
+            <div class="font-semibold">Social Content</div>
             <p class="mt-2 text-sm text-om-muted">
               Clips and highlights designed for fast turnaround.
             </p>
@@ -342,7 +342,7 @@ const emit = defineEmits<{
             />
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Data feed / API</div>
+            <div class="font-semibold">Data Feed / API</div>
             <p class="mt-2 text-sm text-om-muted">
               Integrate with stats aggregators, leagues, and betting partners.
             </p>
@@ -354,7 +354,7 @@ const emit = defineEmits<{
           </div>
         </div>
 
-        <section class="mt-16">
+        <!-- <section class="mt-16">
           <h2 class="om-h2">Data As An Asset</h2>
           <p class="mt-3 om-p max-w-3xl">
             Real-time football data becomes a scalable asset when it can be
@@ -378,10 +378,10 @@ const emit = defineEmits<{
               </p>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <section class="relative mt-16 border-t border-om-border/70">
-          <div class="om-container py-10">
+          <div class="py-10">
             <div class="flex items-end justify-between gap-6">
               <div>
                 <div class="om-pill">Supported by</div>
@@ -419,11 +419,11 @@ const emit = defineEmits<{
                   class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition"
                 />
 
-                <img
+                <!-- <img
                   :src="uncw"
                   alt="UNCW"
                   class="h-12 w-auto object-contain grayscale hover:opacity-100 hover:grayscale-0 transition"
-                />
+                /> -->
 
                 <img
                   :src="altoTamega"
@@ -448,7 +448,7 @@ const emit = defineEmits<{
         >
           <div>
             <div class="font-display text-xl tracking-tight">
-              Want a pilot for your competition?
+              Want A Pilot For Your Competition?
             </div>
             <div class="mt-2 text-sm text-om-bg/80">
               We run fast pilots with clear deliverables and integration paths.
@@ -459,7 +459,7 @@ const emit = defineEmits<{
             class="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold bg-om-bg text-white hover:bg-om-surface2 transition"
             @click="emit('open-contact')"
           >
-            Talk to us
+            Talk To Us
           </button>
         </div>
       </div>

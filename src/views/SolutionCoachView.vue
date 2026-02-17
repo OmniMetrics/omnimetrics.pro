@@ -12,7 +12,7 @@ const emit = defineEmits<{
       <RouterLink
         to="/solutions"
         class="text-sm text-om-muted hover:text-white transition"
-        >← Back to solutions</RouterLink
+        >← Back To Solutions</RouterLink
       >
 
       <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:items-center">
@@ -27,28 +27,28 @@ const emit = defineEmits<{
 
           <div class="mt-8 flex flex-wrap gap-3">
             <button class="om-btn-primary" @click="emit('open-contact')">
-              Request demo
+              Request Demo
             </button>
             <RouterLink to="/#how-it-works" class="om-btn-secondary"
-              >How it works</RouterLink
+              >How It Works</RouterLink
             >
           </div>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-2">
             <div class="om-card p-5">
-              <div class="font-semibold">Live cues</div>
+              <div class="font-semibold">Live Cues</div>
               <div class="mt-1 text-sm text-om-muted">
                 Phase context, momentum shifts, and key signals - live.
               </div>
             </div>
             <div class="om-card p-5">
-              <div class="font-semibold">Bench-ready dashboard</div>
+              <div class="font-semibold">Bench-Ready Dashboard</div>
               <div class="mt-1 text-sm text-om-muted">
                 A clean view designed for staff decisions under time pressure.
               </div>
             </div>
             <div class="om-card p-5 sm:col-span-2">
-              <div class="font-semibold">Instant clips</div>
+              <div class="font-semibold">Instant Clips</div>
               <div class="mt-1 text-sm text-om-muted">
                 Create and share short clips with context in seconds.
               </div>
@@ -76,31 +76,31 @@ const emit = defineEmits<{
 
         <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div class="om-card p-6">
-            <div class="font-semibold">Player & ball tracking</div>
+            <div class="font-semibold">Player & Ball Tracking</div>
             <p class="mt-2 text-sm text-om-muted">
               High-frequency trajectories mapped to pitch coordinates.
             </p>
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Possession chains</div>
+            <div class="font-semibold">Possession Chains</div>
             <p class="mt-2 text-sm text-om-muted">
               Sequence context for buildup, transitions, and chance creation.
             </p>
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Team shape metrics</div>
+            <div class="font-semibold">Team Shape Metrics</div>
             <p class="mt-2 text-sm text-om-muted">
               Compactness, spacing, occupation, and structural tendencies.
             </p>
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Pressing signals</div>
+            <div class="font-semibold">Pressing Signals</div>
             <p class="mt-2 text-sm text-om-muted">
               Triggers, pressure moments, and territorial control indicators.
             </p>
           </div>
           <div class="om-card p-6">
-            <div class="font-semibold">Live clip workflow</div>
+            <div class="font-semibold">Live Clip Workflow</div>
             <p class="mt-2 text-sm text-om-muted">
               Fast clips with context for staff and players.
             </p>
@@ -121,7 +121,7 @@ const emit = defineEmits<{
           <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div class="lg:col-span-8">
               <div class="font-display text-xl tracking-tight">
-                Pilot with a clear deliverable
+                Pilot With A Clear Deliverable
               </div>
               <p class="mt-3 text-sm text-om-bg/80 max-w-3xl">
                 We run pilots with a defined scope: match set, metric set,
@@ -135,7 +135,7 @@ const emit = defineEmits<{
                 class="inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold bg-om-bg text-white hover:bg-om-surface2 transition w-full lg:w-auto"
                 @click="emit('open-contact')"
               >
-                Start a pilot
+                Start A Pilot
               </button>
             </div>
           </div>

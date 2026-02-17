@@ -19,8 +19,8 @@ const year = new Date().getFullYear()
             production.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <button class="om-btn-primary" @click="emit('open-contact')">Request demo</button>
-            <a class="om-btn-secondary" href="mailto:info@omnimetrics.pro">Email us</a>
+            <button class="om-btn-primary" @click="emit('open-contact')">Request Demo</button>
+            <a class="om-btn-secondary" href="mailto:info@omnimetrics.pro">Email Us</a>
           </div>
         </div>
 
