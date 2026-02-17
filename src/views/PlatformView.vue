@@ -59,7 +59,7 @@ const emit = defineEmits<{
       </div>
 
       <section class="mt-16">
-        <h2 class="om-h2">Delivery endpoints</h2>
+  <h2 class="om-h2">Delivery Endpoints</h2>
         <p class="mt-3 om-p max-w-3xl">
           Choose the integration surface that fits your live workflow: from human-facing dashboards to production-ready
           outputs.
@@ -86,7 +86,7 @@ const emit = defineEmits<{
       </section>
 
       <section class="mt-16">
-        <h2 class="om-h2">Data as an asset</h2>
+        <h2 class="om-h2">Data As An Asset</h2>
         <p class="mt-3 om-p max-w-3xl">
           Real-time football data becomes a scalable asset when it can be packaged into reliable products for media,
           competitions, stats aggregation, and betting ecosystems.

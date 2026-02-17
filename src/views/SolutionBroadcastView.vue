@@ -68,7 +68,7 @@ const emit = defineEmits<{
       </div>
 
       <section class="mt-16">
-        <h2 class="om-h2">What it enables</h2>
+  <h2 class="om-h2">What It Enables</h2>
         <p class="mt-3 om-p max-w-2xl">
           The broadcast assistant converts live match context into media-native
           products, optimized for TV, digital, and data partners.

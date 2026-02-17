@@ -36,7 +36,7 @@ const emit = defineEmits<{
           <div class="flex items-start justify-between gap-6">
             <div>
               <div class="om-pill w-fit">AI Coach Assistant</div>
-              <h2 class="mt-4 om-h2">Real-time decision support for clubs</h2>
+              <h2 class="mt-4 om-h2">Real-Time Decision Support For Clubs</h2>
               <p class="mt-3 om-p">
                 Live signals and context designed for touchline decisions, staff
                 communication, and quick in-game clips.
@@ -60,7 +60,7 @@ const emit = defineEmits<{
 
         <div class="om-card p-8">
           <div class="om-pill w-fit">AI Broadcast Assistant</div>
-          <h2 class="mt-4 om-h2">Production intelligence for media</h2>
+          <h2 class="mt-4 om-h2">Production Intelligence For Media</h2>
           <p class="mt-3 om-p">
             Support live production with real-time overlays, social-first
             outputs, and an integration-friendly data feed.

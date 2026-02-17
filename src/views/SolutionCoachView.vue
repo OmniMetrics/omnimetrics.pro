@@ -68,7 +68,7 @@ const emit = defineEmits<{
       </div>
 
       <section class="mt-16">
-        <h2 class="om-h2">Core capabilities</h2>
+  <h2 class="om-h2">Core Capabilities</h2>
         <p class="mt-3 om-p max-w-2xl">
           A real-time computer vision + AI workflow designed specifically for
           in-game coaching decisions.

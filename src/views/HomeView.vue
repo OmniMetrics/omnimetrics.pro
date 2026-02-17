@@ -100,7 +100,7 @@ const emit = defineEmits<{
       <div class="om-container">
         <div class="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <h2 class="om-h2">Our product offerings</h2>
+            <h2 class="om-h2">Our Product Offerings</h2>
             <p class="mt-3 om-p max-w-2xl">
               Purpose-built assistants for different live workflows:
               <br />coaching decision support and broadcast production.
@@ -157,7 +157,7 @@ const emit = defineEmits<{
       <div class="om-container">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
           <div class="lg:col-span-6">
-            <h2 class="om-h2">Built for live constraints</h2>
+            <h2 class="om-h2">Built For Live Constraints</h2>
             <p class="mt-3 om-p">
               A low-latency computer vision + AI stack that converts standard
               camera feeds into real-time signals and production-ready outputs.
@@ -258,7 +258,7 @@ const emit = defineEmits<{
     <!-- Outputs -->
     <section class="mt-16 sm:mt-24 pb-20">
       <div class="om-container">
-        <h2 class="om-h2">Outputs that fit real operations</h2>
+  <h2 class="om-h2">Outputs That Fit Real Operations</h2>
         <p class="mt-3 om-p max-w-2xl">
           Whether you ship to coaches, broadcasters, or data partners, the
           outputs are designed to plug into existing workflows.
@@ -312,7 +312,7 @@ const emit = defineEmits<{
         </div>
 
         <section class="mt-16">
-          <h2 class="om-h2">Data as an asset</h2>
+          <h2 class="om-h2">Data As An Asset</h2>
           <p class="mt-3 om-p max-w-3xl">
             Real-time football data becomes a scalable asset when it can be
             packaged into reliable products for media, competitions, stats
