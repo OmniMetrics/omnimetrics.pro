@@ -127,7 +127,7 @@ const emit = defineEmits<{
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
         <div class="relative">
           <div
-            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100"
+            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100 text-white"
           >
             AI Coach Assistant
           </div>
@@ -139,7 +139,7 @@ const emit = defineEmits<{
         </div>
         <div class="relative">
           <div
-            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100"
+            class="absolute left-6 top-4 z-10 om-pill w-fit bg-om-bg opacity-100 text-white"
           >
             AI Broadcast Assistant
           </div>
