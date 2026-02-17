@@ -1,6 +1,6 @@
 <template>
   <div :class="['flex items-center', positionClass]">
-    <img src="@/assets/logo.svg" alt="Logo" class="h-4 my-8" />
+    <img src="@/assets/omnimetrics-logo-large.svg" alt="Logo" class="h-4 my-8" />
   </div>
 </template>
 

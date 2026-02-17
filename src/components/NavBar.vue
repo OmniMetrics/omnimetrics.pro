@@ -38,8 +38,7 @@ const navLinkClass = computed(() => (path: string) => {
     <div class="om-container">
       <div class="flex h-16 items-center justify-between">
         <RouterLink to="/" class="flex items-center gap-3">
-          <img src="@/assets/logo.svg" alt="OmniMetrics" class="h-7 w-auto" />
-          <span class="hidden sm:inline font-display tracking-tight">OmniMetrics</span>
+          <img src="@/assets/omnimetrics-logo-large.svg" alt="OmniMetrics" class="h-7 w-auto" />
         </RouterLink>
 
         <!-- Desktop -->
