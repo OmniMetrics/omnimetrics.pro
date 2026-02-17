@@ -12,7 +12,7 @@ const year = new Date().getFullYear()
       <div class="grid gap-10 lg:grid-cols-12">
         <div class="lg:col-span-5">
           <div class="flex items-center gap-3">
-            <img src="@/assets/omnimetrics-logo-large.svg" alt="OmniMetrics" class="h-8 w-auto" />
+            <img src="@/assets/omnimetrics-logo-small.svg" alt="OmniMetrics" class="h-6 w-auto" />
           </div>
           <p class="mt-4 om-p max-w-md">
             We turn football video into real-time tactical intelligence. Built for in-game decisions and live

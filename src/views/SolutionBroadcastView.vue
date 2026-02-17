@@ -12,7 +12,7 @@ const emit = defineEmits<{
       <RouterLink
         to="/solutions"
         class="text-sm text-om-muted hover:text-white transition"
-        >← Back to solutions</RouterLink
+        >← Back To Solutions</RouterLink
       >
 
       <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:items-center">
