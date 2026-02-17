@@ -68,6 +68,12 @@ const emit = defineEmits<{
               <li>• Bench-to-staff delivery (tablet / dashboard)</li>
             </ul>
 
+            <img
+              :src="coachAssistant"
+              alt="Coach Assistant"
+              class="mt-4 object-cover rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft transition hover:shadow-glow"
+            />
+
             <div class="mt-6 flex gap-3">
               <RouterLink class="om-btn-secondary" to="/solutions/coach">
                 Details
@@ -112,6 +118,12 @@ const emit = defineEmits<{
               <li>• Commentary and editorial assistance</li>
             </ul>
 
+            <img
+              :src="broadcastAssistant"
+              alt="Broadcast Assistant"
+              class="mt-4 object-cover rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft transition hover:shadow-glow"
+            />
+
             <div class="mt-6 flex gap-3">
               <RouterLink class="om-btn-secondary" to="/solutions/broadcast">
                 Details
@@ -123,7 +135,7 @@ const emit = defineEmits<{
           </div>
         </div>
       </div>
-
+<!-- 
       <div class="mt-14 grid gap-6 lg:grid-cols-2">
         <div class="relative">
           <div
@@ -149,7 +161,7 @@ const emit = defineEmits<{
             class="rounded-lg object-cover border-om-surface2 shadow-lg"
           />
         </div>
-      </div>
+      </div> -->
 
       <div class="mt-16 pb-16">
         <div
