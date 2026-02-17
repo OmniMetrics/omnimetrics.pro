@@ -73,8 +73,8 @@ const navLinkClass = computed(() => (path: string) => {
 
           <RouterLink :class="navLinkClass('/company')" to="/company">Company</RouterLink>
 
-          <button class="ml-2 om-btn-secondary" @click="emit('open-contact')">Contact</button>
-          <button class="ml-2 om-btn-primary" @click="emit('open-contact')">Request demo</button>
+          <!-- <button class="ml-2 om-btn-secondary" @click="emit('open-contact')">Contact</button> -->
+          <button class="ml-2 om-btn-primary" @click="emit('open-contact')">Contact</button>
         </nav>
 
         <!-- Mobile -->
