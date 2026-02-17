@@ -15,7 +15,7 @@ const emit = defineEmits<{
         Solutions
       </div>
 
-      <h1 class="mt-5 om-h1">Built for clubs and broadcasters</h1>
+  <h1 class="mt-5 om-h1">Built For Clubs And Broadcasters</h1>
       <p class="mt-5 om-p text-lg max-w-3xl">
         OmniMetrics builds real-time AI assistants for football, enabling
         in-game decision support, live production intelligence, and fast content

@@ -34,12 +34,12 @@ const emit = defineEmits<{
             </div>
 
             <h1 class="mt-5 om-h1">
-              A Real-time AI assistant for
+              A Real-Time AI Assistant For
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent"
-                >in-game</span
+                >In-Game</span
               >
-              decisions.
+              Decisions.
             </h1>
 
             <p class="mt-5 om-p text-lg">

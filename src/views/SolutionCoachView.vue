@@ -18,7 +18,7 @@ const emit = defineEmits<{
       <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:items-center">
         <div class="lg:col-span-6">
           <div class="om-pill w-fit">AI Coach Assistant</div>
-          <h1 class="mt-5 om-h1">Touchline decision support, in real time</h1>
+          <h1 class="mt-5 om-h1">Touchline Decision Support, In Real Time</h1>
           <p class="mt-5 om-p text-lg">
             A live assistant that turns match video into low-latency tactical
             signals and instant context. Built for coaches and staff during the

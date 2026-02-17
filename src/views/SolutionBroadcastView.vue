@@ -18,7 +18,7 @@ const emit = defineEmits<{
       <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:items-center">
         <div class="lg:col-span-6">
           <div class="om-pill w-fit">AI Broadcast Assistant</div>
-          <h1 class="mt-5 om-h1">Real-time intelligence for production</h1>
+          <h1 class="mt-5 om-h1">Real-Time Intelligence For Production</h1>
           <p class="mt-5 om-p text-lg">
             Support live operations with overlays, editorial decision support,
             and a reliable data feed - designed for TV channels, leagues, and

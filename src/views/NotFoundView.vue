@@ -1,7 +1,7 @@
 <template>
   <div class="pt-14">
     <div class="om-container pb-16">
-      <h1 class="om-h1">Page not found</h1>
+  <h1 class="om-h1">Page Not Found</h1>
       <p class="mt-4 om-p max-w-2xl">
         The page you’re looking for doesn’t exist. Use the navigation or go back to the homepage.
       </p>

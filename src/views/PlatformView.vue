@@ -14,7 +14,7 @@ const emit = defineEmits<{
         Platform
       </div>
 
-      <h1 class="mt-5 om-h1">Real-time AI, built for live football</h1>
+  <h1 class="mt-5 om-h1">Real-Time AI, Built For Live Football</h1>
       <p class="mt-5 om-p text-lg max-w-3xl">
         A live-first computer vision and AI stack that turns standard football video into low-latency signals, delivered
         through dashboards, overlays, and data feeds.
