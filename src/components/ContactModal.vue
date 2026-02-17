@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, onUnmounted } from 'vue'
 
 const props = defineProps<{
   visible: boolean
@@ -22,6 +22,10 @@ watch(
   },
 )
 
+onUnmounted(() => {
+  document.body.classList.remove('overflow-hidden')
+})
+
 const close = () => emit('close')
 
 const sendEmail = () => {
@@ -42,16 +46,33 @@ const sendEmail = () => {
 </script>
 
 <template>
-  <div v-if="visible" class="fixed inset-0 z-[100] grid place-items-center px-4">
-    <button class="absolute inset-0 bg-black/60" aria-label="Close" @click="close"></button>
+  <div
+    v-if="visible"
+    class="fixed inset-0 z-[100] overflow-y-auto px-4 py-6 sm:py-10"
+  >
+    <!-- Backdrop -->
+    <button
+      class="fixed inset-0 bg-black/60"
+      aria-label="Close"
+      @click="close"
+    ></button>
 
-    <div class="relative w-full max-w-xl om-card p-6 sm:p-8">
+    <!-- Modal -->
+    <div
+      class="relative mx-auto w-full max-w-xl om-card p-6 sm:p-8 max-h-[calc(100vh-3rem)] overflow-y-auto"
+    >
       <button
         class="absolute right-4 top-4 rounded-full border border-om-border bg-om-surface/60 p-2 hover:bg-om-surface2 transition"
         aria-label="Close"
         @click="close"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -75,6 +96,7 @@ const sendEmail = () => {
             class="mt-2 w-full rounded-xl border border-om-border bg-om-surface/60 px-4 py-2.5 text-sm text-white outline-none focus:ring-2 focus:ring-secondary/40"
           />
         </div>
+
         <div>
           <label class="block text-sm font-medium text-om-muted">Email</label>
           <input
@@ -83,6 +105,7 @@ const sendEmail = () => {
             class="mt-2 w-full rounded-xl border border-om-border bg-om-surface/60 px-4 py-2.5 text-sm text-white outline-none focus:ring-2 focus:ring-secondary/40"
           />
         </div>
+
         <div class="sm:col-span-2">
           <label class="block text-sm font-medium text-om-muted">Organization</label>
           <input
@@ -91,6 +114,7 @@ const sendEmail = () => {
             class="mt-2 w-full rounded-xl border border-om-border bg-om-surface/60 px-4 py-2.5 text-sm text-white outline-none focus:ring-2 focus:ring-secondary/40"
           />
         </div>
+
         <div class="sm:col-span-2">
           <label class="block text-sm font-medium text-om-muted">Message</label>
           <textarea
@@ -105,14 +129,38 @@ const sendEmail = () => {
       <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button class="om-btn-primary" @click="sendEmail">Send</button>
         <div class="text-sm text-om-muted">
-          Or email <a class="om-link" href="mailto:info@omnimetrics.pro">info@omnimetrics.pro</a>
+          Or email
+          <a class="om-link" href="mailto:info@omnimetrics.pro">
+            info@omnimetrics.pro
+          </a>
         </div>
       </div>
 
-      <div class="mt-6 flex items-center gap-4 text-om-muted">
-        <a class="hover:text-white transition" href="https://pt.linkedin.com/company/omnimetricspro" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="hover:text-white transition" href="https://www.instagram.com/omnimetrics.pro/" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="hover:text-white transition" href="https://github.com/OmniMetrics/" target="_blank" rel="noreferrer">GitHub</a>
+      <div class="mt-6 flex flex-wrap items-center gap-4 text-om-muted">
+        <a
+          class="hover:text-white transition"
+          href="https://pt.linkedin.com/company/omnimetricspro"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+        <a
+          class="hover:text-white transition"
+          href="https://www.instagram.com/omnimetrics.pro/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+        <a
+          class="hover:text-white transition"
+          href="https://github.com/OmniMetrics/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </div>
     </div>
   </div>
