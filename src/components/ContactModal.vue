@@ -82,7 +82,7 @@ const sendEmail = () => {
         Contact
       </div>
 
-      <h3 class="mt-4 om-h3">Request a demo</h3>
+      <h3 class="mt-4 om-h3">Request A Demo</h3>
       <p class="mt-2 om-p">
         Tell us what you're building (club workflow or broadcast workflow). We'll reply with next steps and a demo slot.
       </p>

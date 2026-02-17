@@ -121,7 +121,7 @@ const emit = defineEmits<{
             <img
               :src="coachBg"
               alt="Coach Background"
-              class="absolute inset-0 h-full w-full object-cover opacity-30"
+              class="absolute inset-0 h-full w-full object-cover opacity-15"
             />
 
             <!-- Overlay -->
@@ -133,7 +133,7 @@ const emit = defineEmits<{
             <div class="relative z-10">
               <div class="om-pill w-fit text-white">AI Coach Assistant</div>
 
-              <h3 class="mt-4 om-h3 text-white">Decision support for clubs</h3>
+              <h3 class="mt-4 om-h3 text-white">Decision Support For Clubs</h3>
 
               <p class="mt-3 om-p text-white">
                 Live tactical signals and context, built to support touchline
@@ -161,7 +161,7 @@ const emit = defineEmits<{
             <img
               :src="broadcastBg"
               alt="Broadcast Background"
-              class="absolute inset-0 h-full w-full object-cover opacity-30"
+              class="absolute inset-0 h-full w-full object-cover opacity-20"
             />
 
             <!-- Overlay -->
@@ -173,7 +173,7 @@ const emit = defineEmits<{
             <div class="relative z-10">
               <div class="om-pill w-fit text-white">AI Broadcast Assistant</div>
 
-              <h3 class="mt-4 om-h3 text-white">Production intelligence for media</h3>
+              <h3 class="mt-4 om-h3 text-white">Production Intelligence For Media</h3>
 
               <p class="mt-3 om-p text-white">
                 Power overlays, social-first outputs, and editorial decision
