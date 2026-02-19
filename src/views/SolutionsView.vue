@@ -173,8 +173,8 @@ const emit = defineEmits<{
                 Who We Work With
               </div>
               <p class="mt-3 text-sm text-om-bg/80 max-w-3xl">
-                TV channels, leagues, broadcasters, clubs, stats aggregators,
-                and betting/data partners — anyone who needs reliable, real-time
+                TV Channels, Leagues, Broadcasters, Clubs, Stats Aggregators,
+                and Betting/Data Partners — anyone who needs reliable, real-time
                 football intelligence from video.
               </p>
             </div>

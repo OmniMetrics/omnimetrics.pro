@@ -37,7 +37,7 @@ const emit = defineEmits<{
             </div>
 
             <h1 class="mt-5 om-h1">
-              A Real-Time <br>AI Assistant For <br>
+              A Real-Time <br />AI Assistant For <br />
               <span
                 class="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-accent"
                 >In-Game</span
@@ -46,9 +46,8 @@ const emit = defineEmits<{
             </h1>
 
             <p class="mt-5 om-p text-lg">
-              OmniMetrics turns live match video into low-latency,
-              cost-effective, actionable insights. Designed for quick touchline
-              decision support and live production workflows.
+                  One video feed, no hardware required. OmniMetrics turns live match video into low-latency insights for
+                  coaches and broadcasters.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -61,23 +60,27 @@ const emit = defineEmits<{
             </div>
 
             <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-              <div class="om-card p-4">
+              <div
+                class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft"
+              >
                 <div class="text-sm font-semibold">Real-Time</div>
-                <div class="mt-1 text-sm text-om-muted">
-                  Low-latency signals
-                </div>
+                <div class="mt-1 text-sm text-om-bg">Low-Latency Signals</div>
               </div>
-              <div class="om-card p-4">
+
+              <div
+                class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft"
+              >
                 <div class="text-sm font-semibold">Broadcast-Ready</div>
-                <div class="mt-1 text-sm text-om-muted">
-                  Overlays, clips, feeds
+                <div class="mt-1 text-sm text-om-bg/">
+                  Overlays, Clips, Feeds
                 </div>
               </div>
-              <div class="om-card p-4 col-span-2 sm:col-span-1">
+
+              <div
+                class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft col-span-2 sm:col-span-1"
+              >
                 <div class="text-sm font-semibold">Bench-Ready</div>
-                <div class="mt-1 text-sm text-om-muted">
-                  In-game coaching cues
-                </div>
+                <div class="mt-1 text-sm text-om-bg">In-Game Coaching Cues</div>
               </div>
             </div>
           </div>
@@ -106,88 +109,114 @@ const emit = defineEmits<{
             <h2 class="om-h2">Our Product Offerings</h2>
             <p class="mt-3 om-p max-w-2xl">
               Purpose-built assistants for different live workflows:
-              <br />coaching decision support and broadcast production.
+              <br />Coaching Decision Support and Broadcast Production.
             </p>
           </div>
         </div>
 
         <div class="mt-10 grid gap-6 lg:grid-cols-2">
-          <!-- AI Coach Assistant -->
+          <!-- AI COACH ASSISTANT -->
           <RouterLink
             to="/solutions/coach"
-            class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-7 transition hover:shadow-glow"
+            class="group relative overflow-hidden rounded-3xl border border-white/20 transition"
           >
-            <!-- Background Image -->
+            <!-- Background -->
             <img
               :src="coachBg"
               alt="Coach Background"
-              class="absolute inset-0 h-full w-full object-cover opacity-10"
+              class="absolute inset-0 h-full w-full object-cover"
             />
 
-            <!-- Overlay -->
-            <!-- <div
-              class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
-            ></div> -->
+            <!-- Dark Overlay -->
+            <div
+              class="absolute inset-0 bg-[#0B1A33]/85 group-hover:bg-[#0B1A33]/75 transition"
+            ></div>
 
             <!-- Content -->
-            <div class="relative z-10">
-              <div class="om-pill w-fit text-white">AI Coach Assistant</div>
+            <div
+              class="relative z-10 flex min-h-[340px] flex-col px-10 py-12 text-center text-white"
+            >
+              <!-- Centered Block -->
+              <div class="flex flex-1 flex-col items-center justify-center">
+                <div
+                  class="text-xs uppercase tracking-widest text-white font-bold"
+                >
+                  For Clubs & Teams
+                </div>
 
-              <h3 class="mt-4 om-h3 text-white">Decision Support For Clubs</h3>
+                <div
+                  class="mt-3 rounded-full px-12 py-2 text-lg font-semibold tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+                >
+                  AI COACH ASSISTANT
+                </div>
 
-              <p class="mt-3 om-p text-white">
-                Live tactical signals and context, built to support touchline
-                decisions and staff communication.
-              </p>
+                <p class="mt-4 max-w-md text-sm text-white/75 leading-relaxed">
+                  Live tactical signals and context built to support touchline
+                  decisions and staff communication.
+                </p>
+              </div>
 
-              <ul class="mt-5 space-y-2 text-sm text-white">
-                <li>• Live phase / momentum context</li>
-                <li>• Bench-ready player & team signals</li>
-                <li>• Instant clips for staff + players</li>
-              </ul>
-
-              <div class="mt-6 text-sm font-semibold text-om-cyan">
-                Learn more →
+              <!-- Bottom Learn More -->
+              <div
+                class="mt-auto flex flex-col items-center text-sm font-semibold text-white/80 group-hover:text-white transition"
+              >
+                Learn More
+                <div
+                  class="mt-2 h-[3px] w-16 rounded-full bg-white/70 group-hover:w-24 transition-all duration-300"
+                ></div>
               </div>
             </div>
           </RouterLink>
 
-          <!-- AI Broadcast Assistant -->
+          <!-- AI BROADCAST ASSISTANT -->
           <RouterLink
             to="/solutions/broadcast"
-            class="relative overflow-hidden rounded-2xl border border-om-border bg-om-surface2/70 backdrop-blur shadow-soft p-7 transition hover:shadow-glow"
+            class="group relative overflow-hidden rounded-3xl border border-white/20 transition"
           >
-            <!-- Background Image -->
+            <!-- Background -->
             <img
               :src="broadcastBg"
               alt="Broadcast Background"
-              class="absolute inset-0 h-full w-full object-cover opacity-20"
+              class="absolute inset-0 h-full w-full object-cover"
             />
 
-            <!-- Overlay -->
-            <!-- <div
-              class="absolute inset-0 bg-gradient-to-br from-om-bg via-om-bg/85 to-om-bg/70"
-            ></div> -->
+            <!-- Dark Overlay -->
+            <div
+              class="absolute inset-0 bg-[#0B1A33]/85 group-hover:bg-[#0B1A33]/75 transition"
+            ></div>
 
             <!-- Content -->
-            <div class="relative z-10">
-              <div class="om-pill w-fit text-white">AI Broadcast Assistant</div>
+            <div
+              class="relative z-10 flex min-h-[340px] flex-col px-10 py-12 text-center text-white"
+            >
+              <!-- Centered Block -->
+              <div class="flex flex-1 flex-col items-center justify-center">
+                <div
+                  class="text-xs uppercase tracking-widest text-white font-bold"
+                >
+                  For Leagues & Federations, Media & Broadcast
+                </div>
 
-              <h3 class="mt-4 om-h3 text-white">Production Intelligence For Media</h3>
+                <div
+                  class="mt-3 rounded-full px-12 py-2 text-lg font-semibold tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+                >
+                  AI BROADCAST ASSISTANT
+                </div>
 
-              <p class="mt-3 om-p text-white">
-                Power overlays, social-first outputs, and editorial decision
-                support with a clean data feed built for live operations.
-              </p>
+                <p class="mt-4 max-w-md text-sm text-white/75 leading-relaxed">
+                  Power overlays, social-first outputs, and editorial decision
+                  support with a clean data feed built for live operations.
+                </p>
+              </div>
 
-              <ul class="mt-5 space-y-2 text-sm text-white">
-                <li>• Real-time broadcast overlays</li>
-                <li>• Auto-generated clips + captions</li>
-                <li>• Commentary and editorial assistance</li>
-              </ul>
-
-              <div class="mt-6 text-sm font-semibold text-om-cyan">
-                Learn more →
+              <!-- Bottom Learn More -->
+              <div
+                class="mt-auto flex flex-col items-center text-sm font-semibold text-white/80 group-hover:text-white transition"
+              >
+                Learn More
+                <div
+                  class="mt-2 h-[3px] w-16 rounded-full bg-white/70 group-hover:w-24 transition-all duration-300"
+                ></div>
               </div>
             </div>
           </RouterLink>
@@ -203,7 +232,8 @@ const emit = defineEmits<{
             <h2 class="om-h2">Built For Live Constraints</h2>
             <p class="mt-3 om-p">
               A low-latency computer vision + AI stack that converts standard
-              camera feeds into real-time signals and production-ready outputs.
+              camera feeds into real-time signals and production-ready outputs. 
+              No special hardware, no complex setup. Just a single video feed.
             </p>
 
             <div class="mt-7 space-y-3">
@@ -303,7 +333,7 @@ const emit = defineEmits<{
       <div class="om-container">
         <h2 class="om-h2">Outputs That Fit Real Operations</h2>
         <p class="mt-3 om-p max-w-2xl">
-          Whether you ship to coaches, broadcasters, or data partners, the
+          Whether you ship to Coaches, Broadcasters, or Data Partners, the
           outputs are designed to plug into existing workflows.
         </p>
 
@@ -311,7 +341,7 @@ const emit = defineEmits<{
           <div class="om-card p-6">
             <div class="font-semibold">Live Dashboard</div>
             <p class="mt-2 text-sm text-om-muted">
-              Real-time metrics, timelines, and tactical views.
+              Real-Time Metrics, Timelines, and Tactical Views.
             </p>
             <img
               :src="dashboardIcon"
@@ -322,7 +352,7 @@ const emit = defineEmits<{
           <div class="om-card p-6">
             <div class="font-semibold">Broadcast Overlays</div>
             <p class="mt-2 text-sm text-om-muted">
-              On-screen graphics ready for live production.
+              On-Screen Graphics ready for Live Production.
             </p>
             <img
               :src="televisionIcon"
@@ -333,7 +363,7 @@ const emit = defineEmits<{
           <div class="om-card p-6">
             <div class="font-semibold">Social Content</div>
             <p class="mt-2 text-sm text-om-muted">
-              Clips and highlights designed for fast turnaround.
+              Clips and Highlights designed for fast turnaround.
             </p>
             <img
               :src="videoIcon"
@@ -344,7 +374,7 @@ const emit = defineEmits<{
           <div class="om-card p-6">
             <div class="font-semibold">Data Feed / API</div>
             <p class="mt-2 text-sm text-om-muted">
-              Integrate with stats aggregators, leagues, and betting partners.
+              Integrate with Stats Aggregators, Leagues, and Betting Partners.
             </p>
             <img
               :src="storageIcon"

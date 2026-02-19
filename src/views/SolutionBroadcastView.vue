@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
 
+import overlayIcon from '@/assets/img/overlay.png'
+import commentaryIcon from '@/assets/img/commentary.png'
+import socialIcon from '@/assets/img/social-auto.png'
+import feedIcon from '@/assets/img/feeds.png'
+import bdashboardIcon from '@/assets/img/bdashboard.png'
+import scaleIcon from '@/assets/img/scale.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -21,8 +28,8 @@ const emit = defineEmits<{
           <h1 class="mt-5 om-h1">Real-Time Intelligence For Production</h1>
           <p class="mt-5 om-p text-lg">
             Support live operations with overlays, editorial decision support,
-            and a reliable data feed - designed for TV channels, leagues, and
-            broadcasters.
+            and a reliable data feed - designed for TV Channels, Leagues, and
+            Broadcasters.
           </p>
 
           <div class="mt-8 flex flex-wrap gap-3">
@@ -35,22 +42,30 @@ const emit = defineEmits<{
           </div>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-2">
-            <div class="om-card p-5">
-              <div class="font-semibold">Broadcast Overlays</div>
-              <div class="mt-1 text-sm text-om-muted">
-                On-screen metrics that elevate commentary and storytelling.
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft"
+            >
+              <div class="text-sm font-semibold">Broadcast Overlays</div>
+              <div class="mt-1 text-sm text-om-bg">
+              On-screen metrics that elevate commentary and storytelling.
               </div>
             </div>
-            <div class="om-card p-5">
-              <div class="font-semibold">Social Outputs</div>
-              <div class="mt-1 text-sm text-om-muted">
-                Fast-turnaround clips and highlight workflows.
+
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft"
+            >
+              <div class="text-sm font-semibold">Social Outputs</div>
+              <div class="mt-1 text-sm text-om-bg">
+              Fast-turnaround clips and highlight workflows.
               </div>
             </div>
-            <div class="om-card p-5 sm:col-span-2">
-              <div class="font-semibold">Operational Fit</div>
-              <div class="mt-1 text-sm text-om-muted">
-                Built for live constraints and integration realities.
+
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft sm:col-span-2"
+            >
+              <div class="text-sm font-semibold">Operational Fit</div>
+              <div class="mt-1 text-sm text-om-bg">
+              Built for live constraints and integration realities.
               </div>
             </div>
           </div>
@@ -80,12 +95,22 @@ const emit = defineEmits<{
             <p class="mt-2 text-sm text-om-muted">
               A set of broadcast-ready metrics and triggers for graphics.
             </p>
+            <img
+              :src="overlayIcon"
+              alt="Overlay icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Commentary Support</div>
             <p class="mt-2 text-sm text-om-muted">
               Contextual insights and prompts for on-air storytelling.
             </p>
+            <img
+              :src="commentaryIcon"
+              alt="Commentary icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Social-First Automation</div>
@@ -93,24 +118,44 @@ const emit = defineEmits<{
               Clip selection, captions, and packaging to accelerate publishing
               cycles.
             </p>
+            <img
+              :src="socialIcon"
+              alt="Social automation icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Stats Feed</div>
             <p class="mt-2 text-sm text-om-muted">
               Data products for leagues, aggregators, and betting partners.
             </p>
+            <img
+              :src="feedIcon"
+              alt="Feed icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Editorial Dashboard</div>
             <p class="mt-2 text-sm text-om-muted">
               A live view that helps decide what matters right now.
             </p>
+            <img
+              :src="bdashboardIcon"
+              alt="Dashboard icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Scalable Ops</div>
             <p class="mt-2 text-sm text-om-muted">
               Designed to scale across matches and competitions.
             </p>
+            <img
+              :src="scaleIcon"
+              alt="Scale icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
         </div>
       </section>

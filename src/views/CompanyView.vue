@@ -48,8 +48,8 @@ const team = [
           <h2 class="om-h2">Mission</h2>
           <p class="mt-3 om-p">
             Bring high-quality, real-time football data to the people who
-            produce the game: coaches, analysts, broadcasters, and competition
-            operators.
+            produce the game: Coaches, Analysts, Broadcasters, and Competition
+            Operators.
           </p>
           <p class="mt-4 om-p">
             We focus on low-latency data extraction and delivery, building
@@ -71,8 +71,7 @@ const team = [
       <section class="mt-16">
         <h2 class="om-h2">Team</h2>
         <p class="mt-3 om-p max-w-2xl">
-          A blend of computer vision, systems engineering, and football context
-          - focused on shipping a production-grade real-time platform.
+          A blend of computer vision, systems engineering, and football context, focused on shipping a production-grade real-time platform.
         </p>
 
         <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -103,7 +102,7 @@ const team = [
                 Partnerships and Pilots
               </div>
               <p class="mt-3 text-sm text-om-bg/80 max-w-3xl">
-                If you’re a club, broadcaster, league, or data partner, we can
+                If you’re a Club, Broadcaster, League, or Data Partner, we can
                 scope a pilot that fits your operational constraints and
                 commercial goals.
               </p>

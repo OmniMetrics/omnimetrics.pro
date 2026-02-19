@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import coachAssistant from '@/assets/img/coach-assistant.png'
 
+import pitchIcon from '@/assets/img/pitch.png'
+import shapeIcon from '@/assets/img/shape.png'
+import chainIcon from '@/assets/img/chain.png'
+import pressingIcon from '@/assets/img/pressing.png'
+import clipIcon from '@/assets/img/clip.png'
+import kpiIcon from '@/assets/img/kpi.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -35,22 +42,30 @@ const emit = defineEmits<{
           </div>
 
           <div class="mt-10 grid gap-4 sm:grid-cols-2">
-            <div class="om-card p-5">
-              <div class="font-semibold">Live Cues</div>
-              <div class="mt-1 text-sm text-om-muted">
-                Phase context, momentum shifts, and key signals - live.
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-5 text-om-bg shadow-soft"
+            >
+              <div class="text-sm font-semibold">Live Cues</div>
+              <div class="mt-1 text-sm text-om-bg">
+              Phase context, momentum shifts, and key signals - live.
               </div>
             </div>
-            <div class="om-card p-5">
-              <div class="font-semibold">Bench-Ready Dashboard</div>
-              <div class="mt-1 text-sm text-om-muted">
-                A clean view designed for staff decisions under time pressure.
+
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-5 text-om-bg shadow-soft"
+            >
+              <div class="text-sm font-semibold">Bench-Ready Dashboard</div>
+              <div class="mt-1 text-sm text-om-bg">
+              A clean view designed for staff decisions under time pressure.
               </div>
             </div>
-            <div class="om-card p-5 sm:col-span-2">
-              <div class="font-semibold">Instant Clips</div>
-              <div class="mt-1 text-sm text-om-muted">
-                Create and share short clips with context in seconds.
+
+            <div
+              class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-5 text-om-bg shadow-soft sm:col-span-2"
+            >
+              <div class="text-sm font-semibold">Instant Clips</div>
+              <div class="mt-1 text-sm text-om-bg">
+              Create and share short clips with context in seconds.
               </div>
             </div>
           </div>
@@ -80,36 +95,66 @@ const emit = defineEmits<{
             <p class="mt-2 text-sm text-om-muted">
               High-frequency trajectories mapped to pitch coordinates.
             </p>
+            <img
+              :src="pitchIcon"
+              alt="Pitch icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Possession Chains</div>
             <p class="mt-2 text-sm text-om-muted">
               Sequence context for buildup, transitions, and chance creation.
             </p>
+            <img
+              :src="chainIcon"
+              alt="Chain icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Team Shape Metrics</div>
             <p class="mt-2 text-sm text-om-muted">
               Compactness, spacing, occupation, and structural tendencies.
             </p>
+            <img
+              :src="shapeIcon"
+              alt="Shape icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Pressing Signals</div>
             <p class="mt-2 text-sm text-om-muted">
               Triggers, pressure moments, and territorial control indicators.
             </p>
+            <img
+              :src="pressingIcon"
+              alt="Pressing icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Live Clip Workflow</div>
             <p class="mt-2 text-sm text-om-muted">
               Fast clips with context for staff and players.
             </p>
+            <img
+              :src="clipIcon"
+              alt="Clip icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
           <div class="om-card p-6">
             <div class="font-semibold">Custom KPIs</div>
             <p class="mt-2 text-sm text-om-muted">
               Adapt signals to your tactical model and staff preferences.
             </p>
+            <img
+              :src="kpiIcon"
+              alt="KPI icon"
+              class="mt-4 mx-auto h-24 w-auto rounded border-om-surface2 shadow-sm"
+            />
           </div>
         </div>
       </section>
