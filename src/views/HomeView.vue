@@ -19,6 +19,11 @@ import altoTamega from '@/assets/img/alto-tamega.png'
 import broadcastBg from '@/assets/img/broadcast-bg.png'
 import coachBg from '@/assets/img/coach-bg.png'
 
+import liveDashboardBg from '@/assets/img/live-dashboard.png'
+import coachAndAssistantBg from '@/assets/img/coach-&-assistant.png'
+import socialContentBg from '@/assets/img/social-content-bg.png'
+import dataBg from '@/assets/img/data-bg.png'
+
 const emit = defineEmits<{
   (e: 'open-contact'): void
 }>()
@@ -47,7 +52,7 @@ const emit = defineEmits<{
 
             <p class="mt-5 om-p text-lg">
                   One video feed, no hardware required. OmniMetrics turns live match video into low-latency insights for
-                  coaches and broadcasters.
+                  football coaches and broadcasters.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -108,7 +113,7 @@ const emit = defineEmits<{
           <div>
             <h2 class="om-h2">Our Product Offerings</h2>
             <p class="mt-3 om-p max-w-2xl">
-              Purpose-built assistants for different live workflows:
+              Purpose-built football assistants for different live workflows:
               <br />Coaching Decision Support and Broadcast Production.
             </p>
           </div>
@@ -122,7 +127,7 @@ const emit = defineEmits<{
           >
             <!-- Background -->
             <img
-              :src="coachBg"
+              :src="coachAndAssistantBg"
               alt="Coach Background"
               class="absolute inset-0 h-full w-full object-cover"
             />
@@ -145,7 +150,7 @@ const emit = defineEmits<{
                 </div>
 
                 <div
-                  class="mt-3 rounded-full px-12 py-2 text-lg font-semibold tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
                 >
                   AI COACH ASSISTANT
                 </div>
@@ -198,7 +203,7 @@ const emit = defineEmits<{
                 </div>
 
                 <div
-                  class="mt-3 rounded-full px-12 py-2 text-lg font-semibold tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
                 >
                   AI BROADCAST ASSISTANT
                 </div>
@@ -338,49 +343,100 @@ const emit = defineEmits<{
         </p>
 
         <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <div class="om-card p-6">
-            <div class="font-semibold">Live Dashboard</div>
-            <p class="mt-2 text-sm text-om-muted">
-              Real-Time Metrics, Timelines, and Tactical Views.
-            </p>
+          <div class="om-card group relative overflow-hidden p-6">
             <img
-              :src="dashboardIcon"
-              alt="Dashboard icon"
-              class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              :src="liveDashboardBg"
+              alt="Live Dashboard"
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-300 group-hover:opacity-20"
             />
+            <div
+              class="pointer-events-none absolute inset-0 bg-om-bg/10 transition-opacity duration-300 group-hover:opacity-20"
+            ></div>
+
+            <div class="relative">
+              <div class="font-semibold">Live Dashboard</div>
+              <p class="mt-2 text-sm text-om-muted">
+          Real-Time Metrics, Timelines, and Tactical Views.
+              </p>
+              <img
+          :src="dashboardIcon"
+          alt="Dashboard icon"
+          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              />
+            </div>
           </div>
-          <div class="om-card p-6">
-            <div class="font-semibold">Broadcast Overlays</div>
-            <p class="mt-2 text-sm text-om-muted">
-              On-Screen Graphics ready for Live Production.
-            </p>
+
+          <div class="om-card group relative overflow-hidden p-6">
             <img
-              :src="televisionIcon"
-              alt="Television icon"
-              class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              :src="broadcastBg"
+              alt="Broadcast Overlays"
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-300 group-hover:opacity-20"
             />
+            <div
+              class="pointer-events-none absolute inset-0 bg-om-bg/10 transition-opacity duration-300 group-hover:opacity-20"
+            ></div>
+
+            <div class="relative">
+              <div class="font-semibold">Broadcast Overlays</div>
+              <p class="mt-2 text-sm text-om-muted">
+          On-Screen Graphics ready for Live Production.
+              </p>
+              <img
+          :src="televisionIcon"
+          alt="Television icon"
+          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              />
+            </div>
           </div>
-          <div class="om-card p-6">
-            <div class="font-semibold">Social Content</div>
-            <p class="mt-2 text-sm text-om-muted">
-              Clips and Highlights designed for fast turnaround.
-            </p>
+
+          <div class="om-card group relative overflow-hidden p-6">
             <img
-              :src="videoIcon"
-              alt="Video icon"
-              class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              :src="socialContentBg"
+              alt="Social Content"
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-300 group-hover:opacity-20"
             />
+            <div
+              class="pointer-events-none absolute inset-0 bg-om-bg/10 transition-opacity duration-300 group-hover:opacity-20"
+            ></div>
+
+            <div class="relative">
+              <div class="font-semibold">Social Content</div>
+              <p class="mt-2 text-sm text-om-muted">
+          Clips and Highlights designed for fast turnaround.
+              </p>
+              <img
+          :src="videoIcon"
+          alt="Video icon"
+          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              />
+            </div>
           </div>
-          <div class="om-card p-6">
-            <div class="font-semibold">Data Feed / API</div>
-            <p class="mt-2 text-sm text-om-muted">
-              Integrate with Stats Aggregators, Leagues, and Betting Partners.
-            </p>
+
+          <div class="om-card group relative overflow-hidden p-6">
             <img
-              :src="storageIcon"
-              alt="Storage icon"
-              class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              :src="dataBg"
+              alt="Data Feed / API"
+              aria-hidden="true"
+              class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-300 group-hover:opacity-20"
             />
+            <div
+              class="pointer-events-none absolute inset-0 bg-om-bg/10 transition-opacity duration-300 group-hover:opacity-20"
+            ></div>
+
+            <div class="relative">
+              <div class="font-semibold">Data Feed / API</div>
+              <p class="mt-2 text-sm text-om-muted">
+          Integrate with Stats Aggregators, Leagues, and Betting Partners.
+              </p>
+              <img
+          :src="storageIcon"
+          alt="Storage icon"
+          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+              />
+            </div>
           </div>
         </div>
 

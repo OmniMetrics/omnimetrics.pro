@@ -4,6 +4,7 @@ import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
 
 import broadcastBg from '@/assets/img/broadcast-bg.png'
 import coachBg from '@/assets/img/coach-bg.png'
+import coachAndAssistantBg from '@/assets/img/coach-&-assistant.png'
 
 const emit = defineEmits<{
   (e: 'open-contact'): void
@@ -41,7 +42,7 @@ const emit = defineEmits<{
         >
           <!-- Background Image -->
           <img
-            :src="coachBg"
+            :src="coachAndAssistantBg"
             alt=""
             class="absolute inset-0 h-full w-full object-cover opacity-10"
           />
