@@ -2,7 +2,7 @@
 import coachAssistant from '@/assets/img/coach-assistant.png'
 import broadcastAssistant from '@/assets/img/broadcast-assistant.png'
 
-import broadcastBg from '@/assets/img/broadcast-bg.jpg'
+import broadcastBg from '@/assets/img/broadcast-bg.png'
 import coachBg from '@/assets/img/coach-bg.png'
 
 const emit = defineEmits<{

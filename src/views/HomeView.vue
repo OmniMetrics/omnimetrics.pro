@@ -16,7 +16,7 @@ import rnca from '@/assets/img/rnca.png'
 import uncw from '@/assets/img/uncw.png'
 import altoTamega from '@/assets/img/alto-tamega.png'
 
-import broadcastBg from '@/assets/img/broadcast-bg.jpg'
+import broadcastBg from '@/assets/img/broadcast-bg.png'
 import coachBg from '@/assets/img/coach-bg.png'
 
 const emit = defineEmits<{
