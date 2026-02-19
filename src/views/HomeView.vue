@@ -19,6 +19,7 @@ import altoTamega from '@/assets/img/alto-tamega.png'
 import broadcastBg from '@/assets/img/broadcast-bg.png'
 import coachBg from '@/assets/img/coach-bg.png'
 
+import analystBg from '@/assets/img/analyst-bg.png'
 import liveDashboardBg from '@/assets/img/live-dashboard.png'
 import coachAndAssistantBg from '@/assets/img/coach-&-assistant.png'
 import socialContentBg from '@/assets/img/social-content-bg.png'
@@ -51,7 +52,7 @@ const emit = defineEmits<{
             </h1>
 
             <p class="mt-5 om-p text-lg">
-                  One video feed, no hardware required. OmniMetrics turns live match video into low-latency insights for
+                  One video feed, no hardware required. OmniMetrics turns live match video into low-latency metrics and insights for
                   football coaches and broadcasters.
             </p>
 
@@ -69,7 +70,7 @@ const emit = defineEmits<{
                 class="rounded-2xl bg-gradient-to-r from-white/90 to-sky-400/80 p-4 text-om-bg shadow-soft"
               >
                 <div class="text-sm font-semibold">Real-Time</div>
-                <div class="mt-1 text-sm text-om-bg">Low-Latency Signals</div>
+                <div class="mt-1 text-sm text-om-bg">Low-Latency Metrics</div>
               </div>
 
               <div
@@ -150,7 +151,7 @@ const emit = defineEmits<{
                 </div>
 
                 <div
-                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
+                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-secondary to-accent text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
                 >
                   AI COACH ASSISTANT
                 </div>
@@ -203,7 +204,7 @@ const emit = defineEmits<{
                 </div>
 
                 <div
-                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-[#5C7BE3] to-[#0B1A33] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
+                  class="mt-3 rounded-full px-6 sm:px-12 py-2 text-sm sm:text-lg font-semibold tracking-wider sm:tracking-widest uppercase bg-gradient-to-r from-secondary to-accent text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-center max-w-full"
                 >
                   AI BROADCAST ASSISTANT
                 </div>
@@ -281,12 +282,13 @@ const emit = defineEmits<{
               <div class="om-card p-5">
                 <div class="flex items-start justify-between gap-4">
                   <div>
-                    <div class="font-semibold">Understanding</div>
+                    <div class="font-semibold">Reasoning</div>
                     <div class="mt-1 text-sm text-om-muted">
-                      Converting movement into live tactical signals: phases,
+                      Converting movement into live tactical signals: metrics, phases,
                       pressure, shape breaks, and key in-game events.
                     </div>
                     <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="om-pill">Metrics</span>
                       <span class="om-pill">Phases</span>
                       <span class="om-pill">Events</span>
                       <span class="om-pill">Tactical context</span>
@@ -307,7 +309,7 @@ const emit = defineEmits<{
                     <div class="mt-3 flex flex-wrap gap-2">
                       <span class="om-pill">Dashboards</span>
                       <span class="om-pill">Broadcast Overlays</span>
-                      <span class="om-pill">Social media</span>
+                      <span class="om-pill">Social Media</span>
                       <span class="om-pill">APIs</span>
                     </div>
                   </div>
@@ -326,7 +328,7 @@ const emit = defineEmits<{
             <img
               :src="pipelineDiagram"
               alt="Pipeline diagram"
-              class="rounded-lg border-2 border-om-surface2 shadow-lg"
+              class="rounded-lg border-2 border-om-surface2 shadow-lg sm:mt-24"
             />
           </div>
         </div>
@@ -369,7 +371,7 @@ const emit = defineEmits<{
 
           <div class="om-card group relative overflow-hidden p-6">
             <img
-              :src="broadcastBg"
+              :src="analystBg"
               alt="Broadcast Overlays"
               aria-hidden="true"
               class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 transition-opacity duration-300 group-hover:opacity-20"
