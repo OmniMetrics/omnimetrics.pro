@@ -58,4 +58,9 @@
   .om-btn-secondary {
     @apply om-btn border border-om-border bg-om-surface/60 text-white hover:bg-om-surface2;
   }
+
+  .text-xxs {
+    font-size: 0.300rem;
+    line-height: 0.45rem;
+  }
 }

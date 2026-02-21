@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import PlaceholderFigure from '@/components/PlaceholderFigure.vue'
+import HomePipeline from '@/components/HomePipeline.vue'
 
 import homeHero from '@/assets/img/home-hero.png'
 import pipelineDiagram from '@/assets/img/home-pipeline.png'
+import pipelineSkeleton from '@/assets/img/home-pipeline-skeleton.png'
 
 import dashboardIcon from '@/assets/img/dashboard.png'
 import televisionIcon from '@/assets/img/television.png'
@@ -52,8 +54,9 @@ const emit = defineEmits<{
             </h1>
 
             <p class="mt-5 om-p text-lg">
-                  One video feed, no hardware required. OmniMetrics turns live match video into low-latency metrics and insights for
-                  football coaches and broadcasters.
+              One video feed, no hardware required. OmniMetrics turns live match
+              video into low-latency metrics and insights for football coaches
+              and broadcasters.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-3">
@@ -234,102 +237,16 @@ const emit = defineEmits<{
     <section class="mt-16 sm:mt-24" id="how-it-works">
       <div class="om-container">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-start">
-          <div class="lg:col-span-6">
+          <div class="lg:col-span-8">
             <h2 class="om-h2">Built For Live Constraints</h2>
             <p class="mt-3 om-p">
               A low-latency computer vision + AI stack that converts standard
-              camera feeds into real-time signals and production-ready outputs. 
+              camera feeds into real-time signals and production-ready outputs.
               No special hardware, no complex setup. Just a single video feed.
             </p>
-
-            <div class="mt-7 space-y-3">
-              <div class="om-card p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <div class="font-semibold">Perception</div>
-                    <div class="mt-1 text-sm text-om-muted">
-                      Real-time player and ball detection from standard
-                      broadcast feeds, maintaining stable tracking and identity
-                      signals.
-                    </div>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="om-pill">Tracking</span>
-                      <span class="om-pill">Identity</span>
-                      <span class="om-pill">Low latency</span>
-                    </div>
-                  </div>
-                  <span class="om-pill shrink-0">Live</span>
-                </div>
-              </div>
-
-              <div class="om-card p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <div class="font-semibold">Geometry</div>
-                    <div class="mt-1 text-sm text-om-muted">
-                      Mapping detections to pitch coordinates to measure
-                      spacing, zones, and team structure consistently.
-                    </div>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="om-pill">Pitch mapping</span>
-                      <span class="om-pill">Coordinates</span>
-                    </div>
-                  </div>
-                  <span class="om-pill shrink-0">Meters</span>
-                </div>
-              </div>
-
-              <div class="om-card p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <div class="font-semibold">Reasoning</div>
-                    <div class="mt-1 text-sm text-om-muted">
-                      Converting movement into live tactical signals: metrics, phases,
-                      pressure, shape breaks, and key in-game events.
-                    </div>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="om-pill">Metrics</span>
-                      <span class="om-pill">Phases</span>
-                      <span class="om-pill">Events</span>
-                      <span class="om-pill">Tactical context</span>
-                    </div>
-                  </div>
-                  <span class="om-pill shrink-0">Signals</span>
-                </div>
-              </div>
-
-              <div class="om-card p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <div class="font-semibold">Delivery</div>
-                    <div class="mt-1 text-sm text-om-muted">
-                      Delivering live outputs to coaches and media: dashboards,
-                      overlays, instant social media content, and partner APIs.
-                    </div>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="om-pill">Dashboards</span>
-                      <span class="om-pill">Broadcast Overlays</span>
-                      <span class="om-pill">Social Media</span>
-                      <span class="om-pill">APIs</span>
-                    </div>
-                  </div>
-                  <span class="om-pill shrink-0">Outputs</span>
-                </div>
-              </div>
-            </div>
           </div>
-
-          <div class="lg:col-span-6">
-            <!-- <PlaceholderFigure
-              title="Pipeline diagram / workflow visual"
-              hint="Replace with a clean diagram from the pitch: ingest → tracking → pitch mapping → events → outputs."
-              aspect="wide"
-            /> -->
-            <img
-              :src="pipelineDiagram"
-              alt="Pipeline diagram"
-              class="rounded-lg border-2 border-om-surface2 shadow-lg sm:mt-24"
-            />
+          <div class="lg:col-span-12">
+            <HomePipeline :figure-src="pipelineSkeleton" />
           </div>
         </div>
       </div>
@@ -359,12 +276,12 @@ const emit = defineEmits<{
             <div class="relative">
               <div class="font-semibold">Live Dashboard</div>
               <p class="mt-2 text-sm text-om-muted">
-          Real-Time Metrics, Timelines, and Tactical Views.
+                Real-Time Metrics, Timelines, and Tactical Views.
               </p>
               <img
-          :src="dashboardIcon"
-          alt="Dashboard icon"
-          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+                :src="dashboardIcon"
+                alt="Dashboard icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
               />
             </div>
           </div>
@@ -383,12 +300,12 @@ const emit = defineEmits<{
             <div class="relative">
               <div class="font-semibold">Broadcast Overlays</div>
               <p class="mt-2 text-sm text-om-muted">
-          On-Screen Graphics ready for Live Production.
+                On-Screen Graphics ready for Live Production.
               </p>
               <img
-          :src="televisionIcon"
-          alt="Television icon"
-          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+                :src="televisionIcon"
+                alt="Television icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
               />
             </div>
           </div>
@@ -407,12 +324,12 @@ const emit = defineEmits<{
             <div class="relative">
               <div class="font-semibold">Social Content</div>
               <p class="mt-2 text-sm text-om-muted">
-          Clips and Highlights designed for fast turnaround.
+                Clips and Highlights designed for fast turnaround.
               </p>
               <img
-          :src="videoIcon"
-          alt="Video icon"
-          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+                :src="videoIcon"
+                alt="Video icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
               />
             </div>
           </div>
@@ -431,12 +348,12 @@ const emit = defineEmits<{
             <div class="relative">
               <div class="font-semibold">Data Feed / API</div>
               <p class="mt-2 text-sm text-om-muted">
-          Integrate with Stats Aggregators, Leagues, and Betting Partners.
+                Integrate with Stats Aggregators, Leagues, and Betting Partners.
               </p>
               <img
-          :src="storageIcon"
-          alt="Storage icon"
-          class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
+                :src="storageIcon"
+                alt="Storage icon"
+                class="mt-4 mx-auto h-16 w-16 rounded border-om-surface2 shadow-sm"
               />
             </div>
           </div>
