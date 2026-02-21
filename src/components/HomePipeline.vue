@@ -68,10 +68,10 @@ const blocks = props.blocks?.length ? props.blocks : defaultBlocks
 
 <template>
   <section class="w-full">
-    <div class="relative w-full max-w-6xl overflow-hidden rounded-3xl">
+    <div class="relative w-full max-w-6xl overflow-hidden">
 
       <!-- Base figure -->
-      <img :src="figureSrc" alt="" class="block w-full select-none" draggable="false" />
+      <img :src="figureSrc" alt="" class="opacity-50 sm:opacity-100 block w-full select-none" draggable="false" />
 
       <!-- Overlay text (desktop) -->
       <div class="absolute inset-0">
@@ -87,12 +87,12 @@ const blocks = props.blocks?.length ? props.blocks : defaultBlocks
               {{ b.title }}
             </h3>
 
-            <p class="text-xs sm:text-sm mt-2 text-white/90">
+            <p class="text-xs sm:text-sm sm:mt-2 text-white/90">
               {{ b.subtitle }}
             </p>
 
             <div
-              class="mt-3 flex flex-wrap gap-2"
+              class="mt-1 sm:mt-3 flex flex-wrap gap-1 sm:gap-2"
               :class="b.align === 'right' ? 'justify-end' : 'justify-start'"
             >
               <span
